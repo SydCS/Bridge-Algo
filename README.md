@@ -167,6 +167,8 @@ for i in range(1, N + 1):
 
 若必须装满？
 
+https://acm.hdu.edu.cn/showproblem.php?pid=1114
+
 ---
 
 多重背包：
