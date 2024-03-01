@@ -1,11 +1,32 @@
-class Solution {
-    public long mostPoints(int[][] questions) {
-        int n = questions.length;
-        int[] dp = new int[n + 1];
-        // dp[n] = 0;
-        for (int i = n - 1; i >= 0; i--) {
-            dp[i] = Math.max(dp[i + 1], questions[i][0] + dp[Math.min(i + questions[i][1] + 1, n)]);
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Queue;
+
+import org.w3c.dom.Node;
+
+/**
+ * Solution
+ */
+public class Solution {
+
+    public Node bfs(Node source, Node target) {
+        HashMap<Node, Boolean> visited = new HashMap<>();
+        Queue<Node> q = new LinkedList<>();
+        q.add(source);
+        visited.put(source, true);
+        while (!q.isEmpty()) {
+            Node a = q.poll();
+            if (a.equals(target)) {
+                return a;
+            }
+            for (Node b : a.successors()) {
+                if (!visited.getOrDefault(b, false)) {
+                    q.add(b);
+                    visited.put(b, true);
+                }
+            }
         }
-        return dp[0];
+        return null;
     }
+
 }
