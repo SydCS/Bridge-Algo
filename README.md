@@ -27,6 +27,17 @@ https://acm.hdu.edu.cn/showproblem.php?pid=1005
 
 # 贪心
 
+局部最优 $\longrightarrow$ 全局最优
+
+---
+
+sort()
+默认升序
+
+浮点数判等：$fabs(a-b) < \epsilon$
+
+---
+
 https://acm.hdu.edu.cn/showproblem.php?pid=1009
 
 ---
@@ -37,8 +48,7 @@ https://acm.hdu.edu.cn/showproblem.php?pid=1052
 
 ---
 
-最长事件序列：
-按结束时刻排序
+最长事件序列：按结束时刻排序
 
 ---
 
@@ -60,13 +70,6 @@ https://acm.hdu.edu.cn/showproblem.php?pid=2454
 
 https://acm.hdu.edu.cn/showproblem.php?pid=1007
 
----
-
-sort()
-默认升序
-
-浮点数判等：$fabs(a-b) < \epsilon$
-
 # 并查集 Disjoint Set
 
 操作：合并，查找
@@ -80,10 +83,8 @@ sort()
   - 合并 $O(1)$
   - 查找：最坏 $O(N) \rightarrow O(\log N)$
     - 避免最坏情况：
-      - 合并时将深度小的数合并到大的树
-      - 查找带路径压缩
-
----
+      - 合并时，将深度小的数合并到大的树
+      - 查找时，带路径压缩
 
 https://acm.hdu.edu.cn/showproblem.php?pid=1232
 
@@ -94,6 +95,8 @@ Kruskal 算法求最小生成树 Minimum Spanning Tree
 MST 性质：存在一棵最小生成树包含最小权值的边
 
 选最小，查，并
+
+时间复杂度 $O(e \log e)$
 
 https://acm.hdu.edu.cn/showproblem.php?pid=2988
 
