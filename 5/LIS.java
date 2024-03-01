@@ -13,7 +13,6 @@ public class LIS {
         int[] dp = new int[nums.length];
 
         int lis = 1;
-
         for (int i = 0; i < nums.length; i++) {
             int max = 1;
             for (int j = 0; j < i; j++) {
@@ -24,7 +23,6 @@ public class LIS {
             dp[i] = max;
             lis = Math.max(dp[i], lis);
         }
-
         System.out.println(lis);
         scanner.close();
     }
