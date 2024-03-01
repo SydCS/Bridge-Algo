@@ -217,6 +217,20 @@ $$
 
 # BFS
 
+队列
+
+二叉树层次遍历
+
+https://leetcode.cn/problems/binary-tree-level-order-traversal/description/
+
+图 BFS
+
+特点：层次性，适合求最少几步能找到目标的问题
+
+状态转移构成二叉树
+
+https://acm.hdu.edu.cn/showproblem.php?pid=1548
+
 # DFS
 
 # 二分图
