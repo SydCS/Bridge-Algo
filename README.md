@@ -234,7 +234,7 @@ https://leetcode.cn/problems/binary-tree-level-order-traversal/description/
 
 状态（节点），转移（边），构成隐式图，开搜！
 
-剪枝：做标记，已经访问过的节点不再访问
+**剪枝**：做标记，已经访问过的节点不再访问
 
 ```java
 public Node bfs(Node source, Node target) {
@@ -262,7 +262,7 @@ https://acm.hdu.edu.cn/showproblem.php?pid=1548
 
 https://acm.hdu.edu.cn/showproblem.php?pid=1495
 
-网格地图的四方访问：定义一个二维数组全局变量
+网格地图的四方访问：开一个全局变量二维方向数组
 
 https://acm.hdu.edu.cn/showproblem.php?pid=1372
 
@@ -272,8 +272,54 @@ https://acm.hdu.edu.cn/showproblem.php?pid=1372
 
 # DFS
 
+二叉树的遍历：
+
+- 先序
+- 中序
+- 后序
+
+唯一确定二叉树：
+
+- 先 + 中
+- 后 + 中
+
+---
+
+递归实现：
+
+- 分析问题的递归特征
+- 出口
+- 递归
+
+---
+
+数字的全排列：
+
+**回溯**
+
+https://leetcode.cn/problems/permutations/description/
+
+https://acm.hdu.edu.cn/showproblem.php?pid=1027
+
+---
+
+迷宫搜索：
+
+- 每个 block 只能走一次
+- 要求恰好在给点的时刻到达出口
+
+剪枝条件：
+
+- 可达的 block 总数 < 时间
+- Manhattan 距离 > 时间
+- 奇偶剪枝： 时间 - Manhattan 距离 奇
+  - $0 \rightarrow 0, 1 \rightarrow 1$ 奇
+  - $0 \rightarrow 1, 1 \rightarrow 0$ 偶
+
+https://acm.hdu.edu.cn/showproblem.php?pid=1010
+
 # 二分图
 
-# 最短路
-
 # 组合博弈
+
+# 最短路
