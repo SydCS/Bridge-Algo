@@ -108,7 +108,7 @@ https://acm.hdu.edu.cn/showproblem.php?pid=1102
 
 ---
 
-Fibonacci:
+Fibonacci: 1, 1, 2, 3, 5, 8, 13, ...
 $$F(n) = F(n-1) + F(n-2)$$
 $$F(n) = \frac{\phi^n - (1-\phi)^n}{\sqrt{5}}$$
 
@@ -120,9 +120,10 @@ https://acm.hdu.edu.cn/showproblem.php?pid=1297
 
 ---
 
-Catalan:
-$$C_{n+1} = \sum_{i=0}^{n} C_i \cdot C_{n-i} $$
-$$C_n = \frac{1}{n+1} \binom{2n}{n}$$
+Catalan: 1, 1, 2, 5, 14, 42, 132, 429, ...
+$$C_{n+1} = \sum_{i=0}^{n} C_i \cdot C_{n-i}$$
+$$C_n = \binom{2n}{n} - \binom{2n}{n-1}= \frac{1}{n+1} \binom{2n}{n}$$
+$$C_n = \frac{4n−2}{n+1} C_{n-1}$$
 
 https://acm.hdu.edu.cn/showproblem.php?pid=1023
 
@@ -270,6 +271,16 @@ https://acm.hdu.edu.cn/showproblem.php?pid=1372
 
 优先队列
 
+堆
+
+siftDown()
+
+Top-K:
+
+https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/82837278
+
+https://leetcode.cn/problems/kth-largest-element-in-an-array/description/
+
 # DFS
 
 二叉树的遍历：
@@ -288,8 +299,8 @@ https://acm.hdu.edu.cn/showproblem.php?pid=1372
 递归实现：
 
 - 分析问题的递归特征
-- 出口
-- 递归
+- 先写出口
+- 开递
 
 ---
 
@@ -318,8 +329,58 @@ https://acm.hdu.edu.cn/showproblem.php?pid=1027
 
 https://acm.hdu.edu.cn/showproblem.php?pid=1010
 
+---
+
+记忆化 DFS
+
 # 二分图
 
-# 组合博弈
+# 组合博弈 Game Theory
+
+组合游戏 Impartial Combinatorial Games
+
+必胜点 N 必败点 P
+
+属性：
+
+- 所有终结点都是必败点
+- 从必胜点操作，至少有一种方法可以到达必败点
+- 从必败点无论如何操作，都只能进入必胜点
+
+取子游戏算法实现：
+
+- 将所有终结位置标记为 P
+- 将所有一步操作能进入 P 的位置标记为 N
+- 如果从某个点开始的所有一步操作都只能进入 N，则将该点标记为 P
+
+https://acm.hdu.edu.cn/showproblem.php?pid=1846
+
+https://acm.hdu.edu.cn/showproblem.php?pid=2147
+
+---
+
+Nim
+
+**Sprague-Grundy**
+
+$mex$
 
 # 最短路
+
+# Misc
+
+前缀和
+
+---
+
+中心扩散
+
+Manacher's Algorithm
+
+https://leetcode.cn/problems/longest-palindromic-substring/
+
+---
+
+Genetic algorithm
+
+https://www.cnblogs.com/LcyRegister/p/17281139.html

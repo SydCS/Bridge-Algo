@@ -1,22 +1,40 @@
+import java.util.Arrays;
+
 public class Fibonacci {
+    private static int[] memo;
+
     public static void main(String[] args) {
-        int n = 10;
+        int n = 2;
         System.out.println(fibRecursive(n));
+        memo = new int[n + 1];
+        Arrays.fill(memo, -1);
+        System.out.println(fibMemoization(n));
         System.out.println(fibDynamicProgramming(n));
         System.out.println(fibMatrixFastPower(n));
     }
 
     public static int fibRecursive(int n) {
-        if (n <= 1) {
+        if (n <= 1)
             return n;
-        }
+
         return fibRecursive(n - 1) + fibRecursive(n - 2);
     }
 
-    public static int fibDynamicProgramming(int n) {
-        if (n <= 1) {
+    public static int fibMemoization(int n) {
+        if (memo[n] != -1)
+            return memo[n];
+
+        if (n <= 1)
             return n;
-        }
+
+        memo[n] = fibMemoization(n - 1) + fibMemoization(n - 2);
+        return memo[n];
+    }
+
+    public static int fibDynamicProgramming(int n) {
+        if (n <= 1)
+            return n;
+
         int[] dp = new int[n + 1];
         dp[0] = 0;
         dp[1] = 1;
@@ -29,6 +47,7 @@ public class Fibonacci {
     public static int fibMatrixFastPower(int n) {
         if (n <= 1)
             return n;
+
         int[][] result = { { 1, 0 }, { 0, 1 } }; // 单位矩阵
         int[][] fibMatrix = { { 1, 1 }, { 1, 0 } };
 
