@@ -1,15 +1,18 @@
 class Solution {
-    public int maxScore(String s) {
-        int len = s.length();
-        int[] sum = new int[len + 10];
-        for (int i = 1; i <= len; i++)
-            sum[i] = sum[i - 1] + (s.charAt(i - 1) - '0');
+    public int[] corpFlightBookings(int[][] bookings, int n) {
+        int[] seats = new int[n];
+        int[] diff = new int[n + 1];
 
-        int ans = 0;
-        for (int i = 1; i <= len - 1; i++) {
-            int a = i - sum[i], b = sum[len] - sum[i];
-            ans = Math.max(ans, a + b);
+        for (int[] booking : bookings) {
+            diff[booking[0] - 1] += booking[2];
+            if (booking[1] <= n)
+                diff[booking[1]] -= booking[2];
         }
-        return ans;
+
+        seats[0] = diff[0];
+        for (int i = 1; i < n; i++) {
+            seats[i] = seats[i - 1] + diff[i - 1];
+        }
+        return seats;
     }
 }

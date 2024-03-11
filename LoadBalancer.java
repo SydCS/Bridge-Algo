@@ -1,5 +1,6 @@
 import java.util.*;
 
+// https://www.luogu.com.cn/problem/P8755
 public class LoadBalancer {
     static class Task {
         int endTime;

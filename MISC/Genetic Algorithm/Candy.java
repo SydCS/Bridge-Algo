@@ -1,5 +1,6 @@
 import java.util.*;
 
+// https://www.luogu.com.cn/problem/P8687
 public class Candy {
     static final int POPULATION = 1000;
     static final int TIMES = 20;

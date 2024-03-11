@@ -1,3 +1,7 @@
+Java 别随便开 class，容易 MLE！
+
+---
+
 复制数组：
 
 `arr2 = arr1.clone();`
