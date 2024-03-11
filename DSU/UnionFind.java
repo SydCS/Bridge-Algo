@@ -33,7 +33,7 @@ public class UnionFind {
                 parent[i] = i; // 初始化并查集
             }
 
-            for (int i = 0; i < M; i++) {
+            for (int j = 0; j < M; j++) {
                 int a = scanner.nextInt();
                 int b = scanner.nextInt();
                 union(a, b); // 根据道路连接城镇

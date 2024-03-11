@@ -17,3 +17,29 @@
 默认升序 `Arrays.sort(arr);`
 
 降序 `Arrays.sort(arr, Collections.reverseOrder());` (Integer[] arr)
+
+---
+
+HashMap
+
+`put(, )`
+
+`get()`
+
+---
+
+HashSet
+
+`add()`
+
+`contains()`
+
+---
+
+PriorityQueue
+
+`add()`
+
+`peek()`
+
+`poll()`

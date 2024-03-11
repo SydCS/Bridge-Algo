@@ -1,30 +1,5 @@
 https://space.bilibili.com/1402562141/channel/collectiondetail?sid=2213878
 
-# 基础数学
-
-乘法小心爆 int ---> 改 long
-
----
-
-LCM = a / GCD \* b
-
-辗转相除法
-
-https://acm.hdu.edu.cn/showproblem.php?pid=1019
-
----
-
-找规律，循环节
-
-https://acm.hdu.edu.cn/showproblem.php?pid=1021
-
-https://acm.hdu.edu.cn/showproblem.php?pid=1005
-
----
-
-快速幂
-带模运算
-
 # 贪心
 
 局部最优 $\longrightarrow$ 全局最优
@@ -165,9 +140,17 @@ https://acm.hdu.edu.cn/showproblem.php?pid=1421
 
 ---
 
+最长公共子序列 Longest Common Subsequence:
+
+https://leetcode.cn/problems/longest-common-subsequence/description/
+
+---
+
 DP 问题特性：重叠子问题，最优子结构，无后效性
 
 ## 背包 Knapsack
+
+https://github.com/tianyicui/pack
 
 01 背包：
 
@@ -186,8 +169,8 @@ $$
 
 ```python
 for i in range(1, N + 1):
-    for w in range(W, w[i] - 1, -1):
-        dp[w] = max(dp[w], dp[w - w[i]] + v[i])
+    for w in range(W, w_i - 1, -1):
+        dp[w] = max(dp[w], dp[w - w_i] + v[i])
 ```
 
 https://acm.hdu.edu.cn/showproblem.php?pid=2602
@@ -198,8 +181,8 @@ https://acm.hdu.edu.cn/showproblem.php?pid=2602
 
 ```python
 for i in range(1, N + 1):
-    for w in range(w[i], W + 1):
-        dp[w] = max(dp[w], dp[w - w[i]] + v[i])
+    for w in range(w_i, W + 1):
+        dp[w] = max(dp[w], dp[w - w_i] + v[i])
 ```
 
 若必须装满？
@@ -209,6 +192,7 @@ https://acm.hdu.edu.cn/showproblem.php?pid=1114
 ---
 
 多重背包：
+
 转化为 01 背包 - 二进制优化
 
 ---
@@ -218,6 +202,10 @@ https://acm.hdu.edu.cn/showproblem.php?pid=1114
 $$
 dp[i][j][k] = \max \begin{cases} dp[i-1][j][k] \\ dp[i-1][j-w_i][k-c_i] + v_i \end{cases}
 $$
+
+## 区间 DP
+
+## 树形 DP
 
 # BFS
 
@@ -369,7 +357,11 @@ $mex$
 
 # Misc
 
+区间处理：
+
 前缀和
+
+差分
 
 ---
 
@@ -384,3 +376,7 @@ https://leetcode.cn/problems/longest-palindromic-substring/
 Genetic algorithm
 
 https://www.cnblogs.com/LcyRegister/p/17281139.html
+
+# 技巧
+
+https://www.acwing.com/blog/content/32/
