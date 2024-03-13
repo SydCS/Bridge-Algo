@@ -1,5 +1,3 @@
-package Binary;
-
 import java.util.Scanner;
 
 // https://www.luogu.com.cn/problem/P2249

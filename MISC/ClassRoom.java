@@ -1,7 +1,21 @@
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.StreamTokenizer;
 
 // https://www.luogu.com.cn/problem/P1083
 public class ClassRoom {
+    // IO 代码
+    public static StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in), 32768));
+    public static PrintWriter out = new PrintWriter(new OutputStreamWriter(System.out));
+
+    public static int nextInt() throws IOException {
+        in.nextToken();
+        return (int) in.nval;
+    }
+
     static int n;
     static int m;
     static int[] rooms;
@@ -17,19 +31,18 @@ public class ClassRoom {
         }
     }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        n = scanner.nextInt(); // 天数
-        m = scanner.nextInt(); // 订单数量
+    public static void main(String[] args) throws IOException {
+        n = nextInt(); // 天数
+        m = nextInt(); // 订单数量
 
         rooms = new int[n + 1]; // 教室数量数组，从1开始计数
         for (int i = 1; i <= n; i++) {
-            rooms[i] = scanner.nextInt();
+            rooms[i] = nextInt();
         }
 
         orders = new Order[m + 1]; // 订单数组
         for (int i = 1; i <= m; i++) {
-            orders[i] = new Order(scanner.nextInt(), scanner.nextInt(), scanner.nextInt());
+            orders[i] = new Order(nextInt(), nextInt(), nextInt());
         }
 
         // 二分查找无法满足的订单
@@ -45,13 +58,13 @@ public class ClassRoom {
 
         if (r == m + 1) {
             // 如果所有订单均可满足，输出0
-            System.out.println("0");
+            out.println("0");
         } else {
             // 如果有订单无法满足，输出-1 + 该无法满足的订单编号
-            System.out.println("-1");
-            System.out.println(r);
+            out.println("-1");
+            out.println(r);
         }
-        scanner.close();
+        out.close();
     }
 
     public static boolean check(int k) {

@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// https://www.luogu.com.cn/problem/P4035
 public class SphereCenter {
     static int n;
     static double[][] points;
@@ -30,11 +31,12 @@ public class SphereCenter {
         dist = new double[10001];
         adjust = new double[100001];
 
-        for (int i = 1; i <= n + 1; i++)
+        for (int i = 1; i <= n + 1; i++) {
             for (int j = 1; j <= n; j++) {
                 points[i][j] = scanner.nextDouble();
                 center[j] += points[i][j];
             }
+        }
 
         for (int j = 1; j <= n; j++)
             center[j] /= (n + 1); // 初始化
@@ -47,7 +49,6 @@ public class SphereCenter {
 
         for (int j = 1; j <= n; j++)
             System.out.printf("%.3f ", center[j]);
-
         scanner.close();
     }
 }

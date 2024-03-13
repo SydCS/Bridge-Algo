@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// https://www.luogu.com.cn/problem/P1873
 public class EKO {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

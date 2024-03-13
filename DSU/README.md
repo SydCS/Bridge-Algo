@@ -18,7 +18,9 @@ https://acm.hdu.edu.cn/showproblem.php?pid=1232
 
 ---
 
-Kruskal 算法求最小生成树 Minimum Spanning Tree
+Kruskal 算法
+
+最小生成树 Minimum Spanning Tree：权重和最小的无环连通子图
 
 MST 性质：存在一棵最小生成树包含最小权值的边
 

@@ -1,7 +1,6 @@
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
+import java.util.*;
 
+// https://acm.hdu.edu.cn/showproblem.php?pid=1548
 public class Lift {
     static class Floor {
         int position;
@@ -42,7 +41,6 @@ public class Lift {
 
         while (!queue.isEmpty()) {
             Floor current = queue.poll();
-
             if (current.position == end) {
                 return current.steps;
             }

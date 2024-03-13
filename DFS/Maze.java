@@ -1,5 +1,6 @@
 import java.util.*;
 
+// https://acm.hdu.edu.cn/showproblem.php?pid=1010
 public class Maze {
     static char[][] maze;
     static int n, m, t;
@@ -13,12 +14,11 @@ public class Maze {
             n = scanner.nextInt();
             m = scanner.nextInt();
             t = scanner.nextInt();
-            if (n == 0 && m == 0 && t == 0) {
+            if (n == 0 && m == 0 && t == 0)
                 break;
-            }
 
             maze = new char[n][m];
-            int startX = 0, startY = 0, step = 0, unreachable = 0;
+            int startX = 0, startY = 0, unreachable = 0;
             for (int i = 0; i < n; i++) {
                 String line = scanner.next();
                 for (int j = 0; j < m; j++) {
@@ -26,12 +26,10 @@ public class Maze {
                     if (maze[i][j] == 'S') {
                         startX = i;
                         startY = j;
-                    }
-                    if (maze[i][j] == 'D') {
+                    } else if (maze[i][j] == 'D') {
                         endX = i;
                         endY = j;
-                    }
-                    if (maze[i][j] == 'X') {
+                    } else if (maze[i][j] == 'X') {
                         unreachable++;
                     }
                 }
@@ -48,8 +46,7 @@ public class Maze {
 
             reach = false;
             maze[startX][startY] = 'X';
-            dfs(startX, startY, step);
-
+            dfs(startX, startY, 0);
             System.out.println(reach ? "YES" : "NO");
         }
         scanner.close();

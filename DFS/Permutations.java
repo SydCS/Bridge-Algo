@@ -48,12 +48,12 @@ class Permutations2 {
         nums = new ArrayList<>();
         visited = new boolean[n + 1];
 
-        dfs(nums);
+        dfs();
 
         scanner.close();
     }
 
-    public static void dfs(List<Integer> nums) {
+    public static void dfs() {
         if (nums.size() == n) {
             for (int i : nums) {
                 System.out.print(i + " ");
@@ -66,10 +66,10 @@ class Permutations2 {
                 visited[i] = true;
                 nums.add(i);
 
-                dfs(nums);
+                dfs();
 
-                visited[i] = false;
                 nums.remove(nums.size() - 1);
+                visited[i] = false;
             }
         }
     }

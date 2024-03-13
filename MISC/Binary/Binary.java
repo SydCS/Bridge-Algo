@@ -32,8 +32,8 @@ public class Binary {
         i = binarySearch(check2);
         System.err.printf("最后一个<=5的元素 nums[%d] = %d%n", i - 1, nums[i - 1]);
 
-        Function<Integer, Boolean> check = n -> nums[n] >= 12;
-        i = binarySearch(check);
+        Function<Integer, Boolean> check3 = n -> nums[n] >= 12;
+        i = binarySearch(check3);
         System.err.printf("%d%n", i);
     }
 
