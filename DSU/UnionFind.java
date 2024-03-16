@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// https://acm.hdu.edu.cn/showproblem.php?pid=1232
 public class UnionFind {
     private static int[] parent; // 并查集的父节点数组
 
@@ -25,7 +26,7 @@ public class UnionFind {
         while (scanner.hasNext()) {
             int N = scanner.nextInt(); // 城镇数目
             if (N == 0)
-                break; // 当N为0时，输入结束
+                break;
             int M = scanner.nextInt(); // 道路数目
 
             parent = new int[N + 1];
@@ -39,7 +40,7 @@ public class UnionFind {
                 union(a, b); // 根据道路连接城镇
             }
 
-            int components = 0; // 连通分量的数量
+            int components = 0; // 连通分量个数
             for (int i = 1; i <= N; i++) {
                 if (parent[i] == i) {
                     components++;

@@ -27,8 +27,6 @@
 
 https://leetcode.cn/problems/permutations/description/
 
-https://acm.hdu.edu.cn/showproblem.php?pid=1027
-
 ---
 
 迷宫搜索：

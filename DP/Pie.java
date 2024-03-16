@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Pie {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         while (scanner.hasNextInt()) {
             int n = scanner.nextInt();
             if (n == 0)

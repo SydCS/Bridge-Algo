@@ -17,10 +17,9 @@ public class FirstOccurrence {
         scanner.close();
     }
 
-    // 使用二分查找找到第一次出现的位置
+    // 二分查找第一次出现的位置
     private static void findFirstOccurrence(int[] nums, int target) {
-        int left = 1;
-        int right = nums.length;
+        int left = 1, right = nums.length;
 
         while (left < right) {
             int mid = (left + right) >> 1;
@@ -32,7 +31,6 @@ public class FirstOccurrence {
         }
         if (left == nums.length || nums[left] != target) {
             System.out.print(-1 + " ");
-            return;
         } else {
             System.out.print(left + " ");
         }

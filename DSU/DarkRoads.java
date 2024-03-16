@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
+// https://acm.hdu.edu.cn/showproblem.php?pid=2988
 public class DarkRoads {
     static class Road implements Comparable<Road> {
         int x;
@@ -74,6 +75,7 @@ public class DarkRoads {
             }
             Arrays.sort(roads);
 
+            // Kruskal
             int mstCost = 0;
             for (Road r : roads) {
                 int xRoot = find(r.x);
@@ -83,7 +85,6 @@ public class DarkRoads {
                     mstCost += r.z;
                 }
             }
-
             System.out.println(totalCost - mstCost);
         }
         scanner.close();

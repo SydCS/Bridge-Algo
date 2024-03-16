@@ -1,9 +1,4 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import java.io.StreamTokenizer;
+import java.io.*;
 
 // https://www.luogu.com.cn/problem/P1083
 public class ClassRoom {
@@ -78,9 +73,8 @@ public class ClassRoom {
         long sum = 0;
         for (int i = 1; i <= n; i++) {
             sum += diff[i];
-            if (sum > rooms[i]) {
+            if (sum > rooms[i])
                 return false;
-            }
         }
         return true;
     }

@@ -10,7 +10,7 @@ public class Loong {
             nums[i] = scanner.next();
         }
 
-        int[] dp = new int[10]; // dp[k] 表示以 k 为结尾的接龙数列的长度
+        int[] dp = new int[10]; // 转换问题：dp[k] 表示以 k 为结尾的接龙数列的长度
         for (String s : nums) {
             int start = s.charAt(0) - '0';
             int end = s.charAt(s.length() - 1) - '0';

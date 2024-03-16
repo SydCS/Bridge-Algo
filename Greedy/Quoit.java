@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
+// https://acm.hdu.edu.cn/showproblem.php?pid=1007
 public class Quoit {
     static class Point implements Comparable<Point> {
         double x;

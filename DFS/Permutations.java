@@ -29,7 +29,9 @@ public class Permutations {
             if (!visited[i]) {
                 nums[step] = i;
                 visited[i] = true;
+
                 dfs(step + 1);
+
                 visited[i] = false; // 回溯
             }
         }

@@ -1,3 +1,5 @@
+双指针
+
 # 查找
 
 二分
@@ -26,7 +28,7 @@ Manacher's Algorithm
 
 https://leetcode.cn/problems/longest-palindromic-substring/
 
-https://leetcode.cn/problems/palindromic-substrings/description/
+https://leetcode.cn/problems/palindromic-substrings/
 
 # Genetic Algorithm
 

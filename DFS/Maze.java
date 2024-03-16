@@ -36,11 +36,11 @@ public class Maze {
             }
 
             if (n * m - unreachable <= t) { // 剪枝
-                System.out.println("No");
+                System.out.println("NO");
                 continue;
             }
             if ((t - Math.abs(endX - startX) - Math.abs(endY - startY)) % 2 == 1) { // 奇偶剪枝
-                System.out.println("No");
+                System.out.println("NO");
                 continue;
             }
 

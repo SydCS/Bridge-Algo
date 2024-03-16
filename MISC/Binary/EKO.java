@@ -16,8 +16,7 @@ public class EKO {
         }
 
         // 二分查找
-        int l = 0;
-        int r = maxTreeHeight;
+        int l = 0, r = maxTreeHeight;
         while (l < r) {
             int mid = (l + r) >> 1;
             if (check(trees, mid, M)) {

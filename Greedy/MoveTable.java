@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
-public class TableMoving {
+// https://acm.hdu.edu.cn/showproblem.php?pid=1050
+public class MoveTable {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int t = scanner.nextInt(); // Number of test cases
@@ -29,7 +30,6 @@ public class TableMoving {
             for (int j = 0; j < 200; j++) {
                 overlap = Math.max(overlap, P[j]);
             }
-
             System.out.println(overlap * 10);
         }
 
