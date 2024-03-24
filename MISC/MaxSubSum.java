@@ -1,4 +1,3 @@
-package Prefix;
 
 import java.util.Scanner;
 

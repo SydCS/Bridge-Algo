@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// https://acm.hdu.edu.cn/showproblem.php?pid=1176
 public class Pie {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

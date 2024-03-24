@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-// https://www.luogu.com.cn/problem/B3612
+// https://www.luogu.com.cn/problem/B3612 前缀和模板题
 public class PrefixSum {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

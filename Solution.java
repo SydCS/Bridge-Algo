@@ -1,32 +1,33 @@
 class Solution {
-    int[][] dir = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
-
-    public int islandPerimeter(int[][] grid) {
-        for (int i = 0; i < grid.length; i++) {
-            for (int j = 0; j < grid[0].length; j++) {
-                if (grid[i][j] == 1) {
-                    return dfs(grid, i, j);
-                }
-            }
-        }
-        return 0;
+    public int reversePairs(int[] record) {
+        return mergeSort(record, 0, record.length - 1);
     }
 
-    public int dfs(int[][] grid, int i, int j) {
-        if (i < 0 || i >= grid.length || j < 0 || j >= grid[0].length || grid[i][j] == 0)
-            return 1;
-
-        if (grid[i][j] == 2)
+    private int mergeSort(int[] num, int l, int r) {
+        if (l >= r)
             return 0;
 
-        grid[i][j] = 2;
-
-        int peri = 0;
-        for (int k = 0; k < 4; k++) {
-            int nextX = i + dir[k][0];
-            int nextY = j + dir[k][1];
-            peri += dfs(grid, nextX, nextY);
+        int mid = (l + r) >> 1;
+        int rev = mergeSort(num, l, mid) + mergeSort(num, mid + 1, r);
+        if (num[mid] > num[mid + 1]) { // merge
+            int[] tmp = new int[r - l + 1];
+            int i = l, j = mid + 1, k = 0;
+            while (i <= mid && j <= r) {
+                if (num[i] <= num[j]) {
+                    tmp[k++] = num[i++];
+                } else {
+                    rev += (mid - i + 1);
+                    tmp[k++] = num[j++];
+                }
+            }
+            while (i <= mid) {
+                tmp[k++] = num[i++];
+            }
+            while (j <= r) {
+                tmp[k++] = num[j++];
+            }
+            System.arraycopy(tmp, 0, num, l, tmp.length);
         }
-        return peri;
+        return rev;
     }
 }

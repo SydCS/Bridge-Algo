@@ -5,17 +5,18 @@ public class UnionFind {
     private static int[] parent; // 并查集的父节点数组
 
     // 并查集的查找操作，找到元素x的根节点
-    private static int find(int x) {
-        if (parent[x] != x) {
-            parent[x] = find(parent[x]); // 路径压缩
+    private static int find(int i) {
+        if (parent[i] != i) {
+            parent[i] = find(parent[i]); // 路径压缩
         }
-        return parent[x];
+        return parent[i];
+        // return parent[i] == i ? i : (parent[i] = find(parent[i]));
     }
 
     // 并查集的合并操作，将元素x和元素y所在的集合合并
-    private static void union(int x, int y) {
-        int xRoot = find(x);
-        int yRoot = find(y);
+    private static void union(int i, int j) {
+        int xRoot = find(i);
+        int yRoot = find(j);
         if (xRoot != yRoot) {
             parent[xRoot] = yRoot; // 将一个根节点连接到另一个根节点上
         }

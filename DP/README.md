@@ -3,10 +3,10 @@
 数塔问题：自顶向下分析，自底向上计算
 
 $$
-dp[i][j] = \mathop{\max}(dp[i+1][j],dp[i+1][j+1]) + a[i][j]
+dp[i][j] = \mathop{\max} (dp[i+1][j], dp[i+1][j+1]) + a[i][j]
 $$
 
-https://leetcode.cn/problems/triangle/description/
+https://leetcode.cn/problems/triangle/
 
 以时间作为维度的数塔：
 
@@ -20,19 +20,11 @@ $$
 dp[i] = \mathop{\max}(dp[j] + 1, dp[i]) \quad {\forall} 0 ≤ j < i 且 a[j] < a[i]
 $$
 
-https://leetcode.cn/problems/longest-increasing-subsequence/description/
+https://leetcode.cn/problems/longest-increasing-subsequence/
 
 Dilworth 定理：对于一个偏序集，最少链划分数 = 最长反链长度
 
 https://acm.hdu.edu.cn/showproblem.php?pid=1257
-
----
-
-$$
-dp[n][k] = \mathop{\min}(dp[n-1][k], dp[n-2][k-1] + (a[n]-a[n-1])^2)
-$$
-
-https://acm.hdu.edu.cn/showproblem.php?pid=1421
 
 ---
 
@@ -101,6 +93,12 @@ $$
 
 ## 区间 DP
 
+$$
+dp(i,j) = \min \{ dp(i,k) + dp(k+1,j) + cost \} \quad {\forall} i ≤ k < j
+$$
+
+石子合并
+
 ## 树形 DP
 
-# 状态压缩 DP
+## 状态压缩 DP
