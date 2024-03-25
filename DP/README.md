@@ -93,11 +93,13 @@ $$
 
 ## 区间 DP
 
+石子合并：
+
 $$
 dp(i,j) = \min \{ dp(i,k) + dp(k+1,j) + cost \} \quad {\forall} i ≤ k < j
 $$
 
-石子合并
+https://www.luogu.com.cn/problem/P1880
 
 ## 树形 DP
 
