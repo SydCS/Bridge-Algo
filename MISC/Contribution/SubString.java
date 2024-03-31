@@ -1,5 +1,3 @@
-package Contribution;
-
 import java.util.Scanner;
 
 // https://www.luogu.com.cn/problem/P8715
@@ -8,8 +6,8 @@ public class SubString {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.next();
 
-        int count = 0;
         // 贡献法：从一个个字符出发
+        long count = 0;
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             int l = 1, r = 1;
@@ -23,7 +21,7 @@ public class SubString {
                     r++;
                 }
             }
-            count += l * r;
+            count += (long) l * r;
         }
         System.out.println(count);
         scanner.close();

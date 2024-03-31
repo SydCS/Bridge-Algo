@@ -31,7 +31,7 @@ public class FrogCrossRiver {
     }
 
     private static boolean check(int jump, int x) {
-        // 等价于所有长度为 y 的区间内，石头高度和 >= 2x
+        // 等价于 所有长度为 y 的区间内，石头高度和 >= 2x
         for (int i = jump; i < stones.length; i++) {
             if (prefix[i] - prefix[i - jump] < 2 * x) {
                 return false;

@@ -34,10 +34,6 @@ https://www.luogu.com.cn/problem/P1908
 
 # 树状数组 Binary Indexed Tree
 
-# 树
-
-Lowest Common Ancestors
-
 # 最长回文子串
 
 中心扩散

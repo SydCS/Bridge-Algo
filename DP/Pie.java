@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-// https://acm.hdu.edu.cn/showproblem.php?pid=1176
+// https://acm.hdu.edu.cn/showproblem.php?pid=1176 以时间作为维度的数塔
 public class Pie {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
