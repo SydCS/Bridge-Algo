@@ -1,4 +1,3 @@
-
 // 前缀和、差分模板
 public class PreDiff {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
 import java.io.*;
 
-// https://www.luogu.com.cn/problem/P1908
+// https://www.luogu.com.cn/problem/P1908 逆序对模板
 public class ReversePairs {
     // IO 代码
     public static StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in), 32768));

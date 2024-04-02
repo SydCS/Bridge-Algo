@@ -12,7 +12,7 @@ public class Stone {
             prefix[i] = prefix[i - 1] + stones[i];
         }
         for (int i = N + 1; i <= 2 * N; i++) {
-            stones[i] = stones[i - N]; // 延拓
+            stones[i] = stones[i - N]; // 环形，延拓
             prefix[i] = prefix[i - 1] + stones[i];
         }
 

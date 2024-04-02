@@ -1,5 +1,3 @@
-package Interval;
-
 import java.util.Scanner;
 
 // https://www.luogu.com.cn/problem/P9232
@@ -10,21 +8,21 @@ public class Reverse {
         int n = num.length();
 
         int count = 0;
-        // 暴力
-        // for (int i = 0; i < n; i++) {
-        // for (int j = i; j < n; j++) {
-        // for (int l = i, r = j; l < r; l++, r--) {
-        // if (num.charAt(l) > num.charAt(r)) {
-        // count++;
-        // break;
-        // } else if (num.charAt(l) < num.charAt(r)) {
-        // break;
-        // }
-        // }
-        // }
-        // }
+        // 暴力 O(n^3)
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j < n; j++) {
+                for (int l = i, r = j; l < r; l++, r--) {
+                    if (num.charAt(l) > num.charAt(r)) {
+                        count++;
+                        break;
+                    } else if (num.charAt(l) < num.charAt(r)) {
+                        break;
+                    }
+                }
+            }
+        }
 
-        // 区间DP
+        // 区间DP O(n^2)
         int[][] dp = new int[n][n]; // dp[i][j] 表示反转从i到j的子串是否符合条件
         for (int len = 2; len <= n; len++) {
             for (int i = 0; i + len - 1 < n; i++) {

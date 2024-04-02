@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 // https://www.acwing.com/problem/content/description/564/
 public class Mural {
@@ -13,13 +13,13 @@ public class Mural {
                 prefix[i] = prefix[i - 1] + (wall.charAt(i - 1) - '0');
             }
 
-            int len = (N + 1) / 2;
-            int maxBeauty = 0;
+            int len = (N + 1) / 2; // 最终剩余的墙段长度
+            int maxScore = 0;
             for (int i = len; i <= N; i++) {
-                int beauty = -prefix[i - len] + prefix[i];
-                maxBeauty = Math.max(maxBeauty, beauty);
+                int score = -prefix[i - len] + prefix[i];
+                maxScore = Math.max(maxScore, score);
             }
-            System.out.println("Case #" + t + ": " + maxBeauty);
+            System.out.println("Case #" + t + ": " + maxScore);
         }
         scanner.close();
     }

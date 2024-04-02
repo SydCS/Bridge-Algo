@@ -5,10 +5,6 @@
 
 ---
 
-别随便开 class，容易 MLE！
-
----
-
 复制数组：
 
 `arr2 = arr1.clone();`
@@ -33,7 +29,7 @@
 
 HashMap
 
-`put(, )`
+`put( , )`
 
 `get()`
 
@@ -47,12 +43,24 @@ HashSet
 
 ---
 
-Queue
-
-PriorityQueue 默认小根
+Queue 接口 `Queue< > queue = new LinkedList();`
 
 `add()` or `offer()`
 
 `peek()`
 
 `poll()`
+
+PriorityQueue 默认小根
+
+Deque 接口 `Deque< > deque = new LinkedList<>();`
+
+---
+
+Stack
+
+`push()`
+
+`pop()`
+
+`peek()`

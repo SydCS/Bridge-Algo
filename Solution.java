@@ -1,28 +1,26 @@
 class Solution {
-    int m, n;
-    int[][] dirs = { { 0, 1 }, { 0, -1 }, { 1, 0 }, { -1, 0 } };
+    public int[] maxSlidingWindow(int[] nums, int k) {
+        int n = nums.length;
+        int[] ans = new int[n - k + 1];
 
-    public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
-        m = image.length;
-        n = image[0].length;
+        Deque<Integer> q = new ArrayDeque<>(); // 存放下标
+        for (int i = 0; i < n; i++) {
+            // 入
+            while (!q.isEmpty() && nums[i] >= nums[q.peekLast()]) {
+                q.pollLast();
+            }
+            q.addLast(i);
 
-        int oldColor = image[sr][sc];
+            // 出
+            if (i - q.peekFirst() >= k) {
+                q.pollFirst();
+            }
 
-        if (oldColor != newColor)
-            dfs(image, sr, sc, newColor, oldColor);
-
-        return image;
-    }
-
-    private void dfs(int[][] image, int sr, int sc, int newColor, int oldColor) {
-        image[sr][sc] = newColor;
-
-        for (int[] dir : dirs) {
-            int nr = sr + dir[0];
-            int nc = sc + dir[1];
-            if (nr >= 0 && nr < m && nc >= 0 && nc < n && image[nr][nc] == oldColor) {
-                dfs(image, nr, nc, newColor, oldColor);
+            // 记录答案
+            if (i >= k - 1) {
+                ans[i - k + 1] = nums[q.peekFirst()];
             }
         }
+        return ans;
     }
 }

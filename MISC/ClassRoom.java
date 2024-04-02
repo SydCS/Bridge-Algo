@@ -40,7 +40,7 @@ public class ClassRoom {
             orders[i] = new Order(nextInt(), nextInt(), nextInt());
         }
 
-        // 二分查找无法满足的订单
+        // 二分查找 无法满足的订单
         int l = 1, r = m + 1;
         while (l < r) {
             int mid = (l + r) >> 1;

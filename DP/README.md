@@ -30,7 +30,7 @@ https://acm.hdu.edu.cn/showproblem.php?pid=1257
 
 最长公共子序列 Longest Common Subsequence:
 
-https://leetcode.cn/problems/longest-common-subsequence/description/
+https://leetcode.cn/problems/longest-common-subsequence/
 
 ---
 
