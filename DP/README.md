@@ -101,6 +101,12 @@ $$
 
 https://www.luogu.com.cn/problem/P1880
 
+---
+
+最长回文子序列 Longest Palindromic Subsequence:
+
+https://leetcode.cn/problems/longest-palindromic-subsequence/
+
 ## 树形 DP
 
 ## 状态压缩 DP

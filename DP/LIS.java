@@ -11,7 +11,7 @@ public class LIS {
     // nums[i] = scanner.nextInt();
     // }
 
-    // int[] dp = new int[n]; // dp[i] 表示以 nums[i] 为结尾的LIS的长度
+    // int[] dp = new int[n]; // dp[i] 表示以 nums[i] 为结尾的 LIS 的长度
     // int lis = 1;
     // for (int i = 0; i < n; i++) {
     // int max = 1;

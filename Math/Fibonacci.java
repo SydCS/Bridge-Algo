@@ -4,12 +4,16 @@ public class Fibonacci {
     private static int[] memo;
 
     public static void main(String[] args) {
-        int n = 2;
+        int n = 3;
+
         System.out.println(fibRecursive(n));
+
         memo = new int[n + 1];
         Arrays.fill(memo, -1);
         System.out.println(fibMemoization(n));
+
         System.out.println(fibDynamicProgramming(n));
+
         System.out.println(fibMatrixFastPower(n));
     }
 
@@ -21,11 +25,11 @@ public class Fibonacci {
     }
 
     public static int fibMemoization(int n) {
-        if (memo[n] != -1)
-            return memo[n];
-
         if (n <= 1)
             return n;
+
+        if (memo[n] != -1)
+            return memo[n];
 
         memo[n] = fibMemoization(n - 1) + fibMemoization(n - 2);
         return memo[n];

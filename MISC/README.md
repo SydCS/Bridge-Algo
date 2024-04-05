@@ -1,6 +1,8 @@
 # 二分
 
-前提：满足单调性 / 二段性
+二分查找 前提：满足单调性
+
+二分答案 前提：满足二段性
 
 https://www.acwing.com/blog/content/31/
 
@@ -23,6 +25,10 @@ $$
 # 贡献法
 
 枚举，但换一种角度
+
+# 合并区间
+
+https://leetcode.cn/problems/merge-intervals/
 
 # 逆序对
 

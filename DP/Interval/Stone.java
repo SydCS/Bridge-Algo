@@ -17,7 +17,7 @@ public class Stone {
         }
 
         // 区间DP
-        // dp[i][j] 表示合并区间 [i, j] 内的石头的最大/最小得分
+        // dp[i][j] 表示合并区间 [i, j] 内石头的最大/最小得分
         // dp[i][j] = max(dp[i][k] + dp[k + 1][j]) + a[i] + ... + a[j]
         int[][] dpMax = new int[2 * N + 1][2 * N + 1];
         int[][] dpMin = new int[2 * N + 1][2 * N + 1];

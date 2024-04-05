@@ -8,7 +8,7 @@
 
 LCM = a / GCD \* b
 
-辗转相除法
+辗转相除法 $O(\log n)$
 
 https://acm.hdu.edu.cn/showproblem.php?pid=1019
 

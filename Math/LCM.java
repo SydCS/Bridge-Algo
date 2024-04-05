@@ -24,6 +24,7 @@ public class LCM {
     }
 
     private static int gcd(int a, int b) {
+        // 辗转相除
         while (b != 0) {
             int t = a % b;
             a = b;

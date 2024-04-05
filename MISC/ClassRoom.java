@@ -1,7 +1,7 @@
 import java.io.*;
 
 // https://www.luogu.com.cn/problem/P1083
-public class ClassRoom {
+public class Classroom {
     // IO 代码
     public static StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in), 32768));
     public static PrintWriter out = new PrintWriter(new OutputStreamWriter(System.out));
@@ -40,7 +40,7 @@ public class ClassRoom {
             orders[i] = new Order(nextInt(), nextInt(), nextInt());
         }
 
-        // 二分查找 无法满足的订单
+        // 二分答案 无法满足的订单
         int l = 1, r = m + 1;
         while (l < r) {
             int mid = (l + r) >> 1;
@@ -70,6 +70,7 @@ public class ClassRoom {
             diff[orders[i].t + 1] -= orders[i].d;
         }
 
+        // 的前缀和
         long sum = 0;
         for (int i = 1; i <= n; i++) {
             sum += diff[i];

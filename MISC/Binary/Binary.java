@@ -7,7 +7,6 @@ public class Binary {
     public static void main(String[] args) {
         nums = new int[] { 1, 2, 3, 5, 5, 5, 8, 9 };
 
-        // 二分
         // int l = 0, r = nums.length;
         // while (l < r) {
         // int mid = (l + r) >> 1;
@@ -83,9 +82,5 @@ public class Binary {
 
     public static boolean check1(int n) {
         return nums[n] >= 5;
-    }
-
-    public static boolean check2(int n) {
-        return nums[n] > 5;
     }
 }

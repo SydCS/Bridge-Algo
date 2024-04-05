@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 // https://www.luogu.com.cn/problem/P8710
-public class Node {
+public class NetworkNode {
     static int[] parents;
 
     static int find(int x) {

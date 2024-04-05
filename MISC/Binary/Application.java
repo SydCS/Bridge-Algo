@@ -8,8 +8,7 @@ public class Application {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int m = scanner.nextInt();
-        int n = scanner.nextInt();
+        int m = scanner.nextInt(), n = scanner.nextInt();
         schools = new int[m];
         for (int i = 0; i < m; i++) {
             schools[i] = scanner.nextInt();
@@ -20,6 +19,7 @@ public class Application {
             students[i] = scanner.nextInt();
         }
 
+        // 二分答案
         long count = 0;
         for (int i = 0; i < n; i++) {
             long target = students[i];

@@ -2,8 +2,8 @@ import java.util.*;
 
 // https://www.luogu.com.cn/problem/P7557
 public class HIndex {
-    static int[] citations;
     static int N, K, L;
+    static int[] citations;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

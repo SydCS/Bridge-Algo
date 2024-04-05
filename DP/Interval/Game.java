@@ -13,7 +13,7 @@ public class Game {
         }
 
         // 区间DP
-        int[][] dp = new int[N][N]; // dp[i][j] 表示区间 [i, j] 中先手分值-后手分值的最大值
+        int[][] dp = new int[N][N]; // dp[i][j] 表示区间 [i, j] 中先手得分-后手得分的最大值
         for (int i = 0; i < N; i++) {
             dp[i][i] = nums[i];
         }
@@ -24,6 +24,7 @@ public class Game {
                 dp[i][j] = Math.max(nums[i] - dp[i + 1][j], nums[j] - dp[i][j - 1]);
             }
         }
+
         int diff = dp[0][N - 1];
         System.out.println((sum + diff) / 2 + " " + (sum - diff) / 2);
         scanner.close();

@@ -23,9 +23,9 @@ public class Cowshed {
 
         int maxArea = 0;
         for (int low = 0; low < C; low++) { // 枚举下边界
-            // 直方图中最大矩形
+            // 直方图中最大矩形 O(R)
 
-            // 单调栈预处理：左/右边第一个比 heights[i] 小的下标 O(n)
+            // 单调栈预处理：左/右边第一个比 heights[i] 小的下标
             int[] left = new int[R];
             int[] right = new int[R];
 

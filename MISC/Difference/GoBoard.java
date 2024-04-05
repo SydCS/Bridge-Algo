@@ -1,7 +1,7 @@
 import java.io.*;
 
 // https://www.acwing.com/problem/content/description/5399/
-public class Board {
+public class GoBoard {
     // IO 代码
     public static StreamTokenizer in = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in), 32768));
     public static PrintWriter out = new PrintWriter(new OutputStreamWriter(System.out));

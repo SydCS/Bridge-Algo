@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
-// 最长回文子序列
-// https://www.luogu.com.cn/problem/P8638 
 // https://www.luogu.com.cn/problem/P1435
+// https://www.luogu.com.cn/problem/P8638 
 public class Palindrome {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.next();
         int n = s.length();
 
+        // 最长回文子序列
         // 法1：自身翻转后求 LCS
 
         // 法2：区间DP

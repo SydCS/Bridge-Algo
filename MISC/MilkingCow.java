@@ -3,8 +3,7 @@ import java.util.*;
 // https://www.luogu.com.cn/problem/P1204
 public class MilkingCow {
     static class Time implements Comparable<Time> {
-        int start;
-        int end;
+        int start, end;
 
         public Time(int start, int end) {
             this.start = start;
