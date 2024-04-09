@@ -2,8 +2,6 @@ import java.util.*;
 
 // https://www.luogu.com.cn/problem/P8602
 public class Diameter {
-    static List<Edge>[] tree;
-
     static class Edge {
         int to, dist;
 
@@ -13,18 +11,23 @@ public class Diameter {
         }
     }
 
+    static List<Edge>[] adj; // 邻接表
+    static int[] dist;
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        tree = new ArrayList[n + 1];
+        adj = new ArrayList[n + 1];
         for (int i = 1; i <= n; i++) {
-            tree[i] = new ArrayList<>();
+            adj[i] = new ArrayList<>();
         }
-        for (int i = 0; i < n - 1; i++) {
+        for (int i = 1; i <= n; i++) {
             int p = scanner.nextInt(), q = scanner.nextInt(), d = scanner.nextInt();
-            tree[p].add(new Edge(q, d));
-            tree[q].add(new Edge(p, d));
+            // 双向建边
+            adj[p].add(new Edge(q, d));
+            adj[q].add(new Edge(p, d));
         }
+        scanner.close();
 
         // 求树的直径：两次 DFS
         dist = new int[n + 1];
@@ -43,17 +46,14 @@ public class Diameter {
             diameter = Math.max(diameter, dist[i]);
         }
         System.out.println(diameter * 10L + ((long) diameter * (long) (diameter + 1)) / 2);
-        scanner.close();
     }
 
-    static int[] dist;
+    private static void dfs(int n, int father, int length) {
+        dist[n] = length;
 
-    private static void dfs(int u, int father, int length) {
-        dist[u] = length;
-
-        for (Edge e : tree[u]) {
+        for (Edge e : adj[n]) {
             if (e.to != father) {
-                dfs(e.to, u, e.dist + length);
+                dfs(e.to, n, length + e.dist);
             }
         }
     }

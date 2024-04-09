@@ -12,8 +12,7 @@ public class Grade {
     }
 
     public static void main(String[] args) throws IOException {
-        int n = nextInt();
-        int p = nextInt();
+        int n = nextInt(), p = nextInt();
 
         int[] nums = new int[n + 1];
         int[] diff = new int[n + 2];
@@ -23,9 +22,7 @@ public class Grade {
         }
 
         while (p-- > 0) {
-            int x = nextInt();
-            int y = nextInt();
-            int z = nextInt();
+            int x = nextInt(), y = nextInt(), z = nextInt();
             diff[x] += z;
             diff[y + 1] -= z;
         }

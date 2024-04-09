@@ -5,9 +5,7 @@ public class FibonacciMod7 {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            int A = scanner.nextInt();
-            int B = scanner.nextInt();
-            int n = scanner.nextInt();
+            int A = scanner.nextInt(), B = scanner.nextInt(), n = scanner.nextInt();
             if (A == 0 && B == 0 && n == 0)
                 break;
 
@@ -24,5 +22,4 @@ public class FibonacciMod7 {
 
         return (A * fibMod(A, B, n - 1) + B * fibMod(A, B, n - 2)) % 7;
     }
-
 }

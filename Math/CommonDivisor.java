@@ -1,14 +1,16 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
+// https://www.acwing.com/problem/content/4202/
 public class CommonDivisor {
     static int N = 1350;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt(), b = scanner.nextInt();
+        scanner.close();
 
-        // 预处理：所有的公约数 = 最大公约数的所有约数 O(\log n + \sqrt n)
+        // 所有的公约数 = 最大公约数 GCD 的所有约数 O(\log n + \sqrt n)
         int gcd = gcd(a, b);
         int[] commonDivisor = new int[N];
         int count = 0;
@@ -37,7 +39,6 @@ public class CommonDivisor {
             if (!flag)
                 System.out.println(-1);
         }
-        scanner.close();
     }
 
     private static int gcd(int a, int b) {

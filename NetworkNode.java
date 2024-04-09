@@ -21,7 +21,7 @@ public class NetworkNode {
             parents[i] = i;
         }
 
-        // O(m n logn)
+        // O(m n \log n)
         while (m-- > 0) {
             int op = scanner.nextInt();
             if (op == 1) {

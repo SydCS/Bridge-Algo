@@ -14,6 +14,8 @@ $$
 prefix[i] = prefix[i-1] + a[i];
 $$
 
+---
+
 差分
 
 $$
@@ -37,22 +39,6 @@ https://leetcode.cn/problems/merge-intervals/
 求逆序对个数：归并排序 / 树状数组 $O(n \log n)$
 
 https://www.luogu.com.cn/problem/P1908
-
-# 单调栈
-
-Next Greater Element: 在数组中，找每个数左/右边第一个比它大/小的数 $O(n)$
-
-https://leetcode.cn/problems/daily-temperatures/
-
-https://leetcode.cn/problems/largest-rectangle-in-histogram/
-
-# 单调队列
-
-滑动窗口：求区间最值 $O(n)$
-
-https://leetcode.cn/problems/sliding-window-maximum/
-
-# 树状数组 Binary Indexed Tree
 
 # 最长回文子串
 

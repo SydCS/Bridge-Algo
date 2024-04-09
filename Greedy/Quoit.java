@@ -21,7 +21,7 @@ public class Quoit {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        while (scanner.hasNext()) {
+        while (true) {
             int n = scanner.nextInt();
             if (n == 0)
                 break;
@@ -34,7 +34,7 @@ public class Quoit {
 
             double minDistance = Double.MAX_VALUE;
             for (int i = 0; i < n; i++) {
-                for (int j = i + 1; j < i + 5 && j < n; j++) { // NOTE: wrong algo but AC
+                for (int j = i + 1; j < i + 5 && j < n; j++) { // NOTE: wrong but AC
                     minDistance = Math.min(minDistance,
                             Math.pow((points[i].x - points[j].x), 2) + Math.pow((points[i].y - points[j].y), 2));
                 }

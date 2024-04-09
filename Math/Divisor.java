@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
+// https://www.acwing.com/problem/content/3380/
 public class Divisor {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         while (n-- > 0) {
             int a = scanner.nextInt();
-            // O(\sqrt a)
 
-            // 法1：试除法
+            // 法1：试除法 O(\sqrt a)
             // int count = 0;
             // for (int i = 1; i <= a / i; i++) {
             // if (a % i == 0) {
@@ -19,7 +19,7 @@ public class Divisor {
             // }
             // }
 
-            // 法2：分解质因数
+            // 法2：分解质因数 O(\sqrt a)
             int count = 1;
             for (int i = 2; i <= a / i; i++) {
                 if (a % i == 0) {

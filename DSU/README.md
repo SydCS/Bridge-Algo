@@ -28,6 +28,6 @@ MST 性质：存在一棵最小生成树包含最小权值的边
 
 时间复杂度 $O(e \log e)$
 
-https://acm.hdu.edu.cn/showproblem.phhp?pid=2988
+https://acm.hdu.edu.cn/showproblem.php?pid=2988
 
 https://acm.hdu.edu.cn/showproblem.php?pid=1102
