@@ -6,6 +6,7 @@ public class EditDistance {
         Scanner scanner = new Scanner(System.in);
         String s1 = scanner.next(), s2 = scanner.next();
         int n1 = s1.length(), n2 = s2.length();
+        scanner.close();
 
         int[][] dp = new int[n1 + 1][n2 + 1]; // 到第 i j 个字符的最短编辑距离
         for (int i = 0; i <= n1; i++) {
@@ -23,6 +24,5 @@ public class EditDistance {
             }
         }
         System.out.println(dp[n1][n2]);
-        scanner.close();
     }
 }

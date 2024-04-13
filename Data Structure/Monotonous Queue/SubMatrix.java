@@ -11,9 +11,9 @@ public class SubMatrix {
                 matrix[i][j] = scanner.nextInt();
             }
         }
+        scanner.close();
 
-        // 二维 单调队列
-        // 转换为两个一维
+        // 二维 单调队列：转换为两个一维
 
         // 对于每一行，求长度为 b 的窗口的最值 O(n * m)
         int[][] maxRow = new int[n][m - b + 1];
@@ -21,6 +21,7 @@ public class SubMatrix {
         for (int i = 0; i < n; i++) {
             Deque<Integer> q1 = new LinkedList<>();
             Deque<Integer> q2 = new LinkedList<>();
+
             for (int j = 0; j < m; j++) {
                 while (!q1.isEmpty() && matrix[i][j] >= matrix[i][q1.peekLast()]) {
                     q1.pollLast();
@@ -50,6 +51,7 @@ public class SubMatrix {
         // 再对于每一列，求高度为 a 的窗口的最值 O(n * m)
         int[][] maxRowCol = new int[n - a + 1][m - b + 1];
         int[][] minRowCol = new int[n - a + 1][m - b + 1];
+
         for (int j = 0; j < m - b + 1; j++) {
             Deque<Integer> q1 = new LinkedList<>();
             Deque<Integer> q2 = new LinkedList<>();
@@ -87,6 +89,5 @@ public class SubMatrix {
             }
         }
         System.out.println(ans);
-        scanner.close();
     }
 }

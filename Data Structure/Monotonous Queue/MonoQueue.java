@@ -11,6 +11,7 @@ public class MonoQueue {
         for (int i = 0; i < n; i++) {
             nums[i] = scanner.nextInt();
         }
+        scanner.close();
 
         int[] max = new int[n - k + 1];
         int[] min = new int[n - k + 1];
@@ -51,6 +52,5 @@ public class MonoQueue {
         for (int i : max) {
             System.out.print(i + " ");
         }
-        scanner.close();
     }
 }

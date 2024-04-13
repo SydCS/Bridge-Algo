@@ -13,6 +13,7 @@ public class LCS {
         for (int i = 0; i < n; i++) {
             seq2[i] = scanner.nextInt();
         }
+        scanner.close();
 
         // O(n^2)
         int[][] dp = new int[n + 1][n + 1]; // dp[i][j] 表示到 seq1[i-1] 和 seq2[j-1] 的 LCS 的长度
@@ -29,6 +30,5 @@ public class LCS {
 
         // O(n \log n)
 
-        scanner.close();
     }
 }

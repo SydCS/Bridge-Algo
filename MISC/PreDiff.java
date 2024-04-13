@@ -1,8 +1,8 @@
 // 前缀和、差分模板
 public class PreDiff {
     public static void main(String[] args) {
-        int n = 5;
-        int[] nums = new int[n + 1]; // (0) 1 4 9 16 25
+        final int n = 5;
+        final int[] nums = new int[n + 1]; // (0) 1 4 9 16 25
         int[] prefix = new int[n + 1]; // (0) 1 5 14 30 55
         int[] diff = new int[n + 1]; // (0) 1 3 5 7 9
 

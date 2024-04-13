@@ -1,7 +1,8 @@
+// 二维
 public class PreDiff2D {
     public static void main(String[] args) {
-        int n = 3, m = 4;
-        int[][] matrix = new int[n + 1][m + 1];
+        final int n = 3, m = 4;
+        final int[][] matrix = new int[n + 1][m + 1];
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= m; j++) {
                 matrix[i][j] = (i - 1) * m + j;
@@ -13,7 +14,7 @@ public class PreDiff2D {
         int[][] prefix = new int[n + 1][m + 1];
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= m; j++) {
-                prefix[i][j] = prefix[i - 1][j] + prefix[i][j - 1] - prefix[i - 1][j - 1] + matrix[i][j];
+                prefix[i][j] = matrix[i][j] + prefix[i - 1][j] + prefix[i][j - 1] - prefix[i - 1][j - 1];
             }
         }
         print(prefix);

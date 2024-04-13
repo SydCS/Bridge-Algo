@@ -5,7 +5,7 @@ import java.time.temporal.ChronoUnit;
 
 // https://www.acwing.com/problem/content/3501/
 public class DateDiff {
-    static int[] months = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+    static final int[] months = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
     static int isLeapYear(int y) {
         if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0)

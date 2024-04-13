@@ -7,8 +7,7 @@ public class Pair {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int N = scanner.nextInt();
-        int C = scanner.nextInt();
+        int N = scanner.nextInt(), C = scanner.nextInt();
         nums = new int[N];
         for (int i = 0; i < N; i++) {
             nums[i] = scanner.nextInt();

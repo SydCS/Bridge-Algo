@@ -9,6 +9,7 @@ public class Loong {
         for (int i = 0; i < n; i++) {
             nums[i] = scanner.next();
         }
+        scanner.close();
 
         int[] dp = new int[10]; // 转换问题：dp[k] 表示以 k 为结尾的接龙数列的长度
         for (String s : nums) {
@@ -18,6 +19,5 @@ public class Loong {
         }
 
         System.out.println(n - Arrays.stream(dp).max().getAsInt());
-        scanner.close();
     }
 }

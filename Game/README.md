@@ -2,7 +2,8 @@
 
 组合游戏 Impartial Combinatorial Games
 
-必胜点 N 必败点 P
+必胜点 N
+必败点 P
 
 属性：
 

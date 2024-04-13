@@ -6,6 +6,7 @@ public class Palindrome {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.next();
+        scanner.close();
         int n = s.length();
 
         // 最长回文子序列
@@ -29,6 +30,5 @@ public class Palindrome {
         }
 
         System.out.println(n - dp[0][n - 1]);
-        scanner.close();
     }
 }

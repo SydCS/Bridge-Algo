@@ -48,12 +48,12 @@ public class Diameter {
         System.out.println(diameter * 10L + ((long) diameter * (long) (diameter + 1)) / 2);
     }
 
-    private static void dfs(int n, int father, int length) {
-        dist[n] = length;
+    private static void dfs(int u, int father, int length) {
+        dist[u] = length;
 
-        for (Edge e : adj[n]) {
+        for (Edge e : adj[u]) {
             if (e.to != father) {
-                dfs(e.to, n, length + e.dist);
+                dfs(e.to, u, length + e.dist);
             }
         }
     }

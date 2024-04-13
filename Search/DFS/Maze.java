@@ -2,11 +2,11 @@ import java.util.*;
 
 // https://acm.hdu.edu.cn/showproblem.php?pid=1010
 public class Maze {
-    static char[][] maze;
+    static int[][] dirs = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
     static int n, m, t;
+    static char[][] maze;
     static int endX, endY;
     static boolean reach = false;
-    static int[][] dirs = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

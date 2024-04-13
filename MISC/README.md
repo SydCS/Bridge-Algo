@@ -40,6 +40,8 @@ https://leetcode.cn/problems/merge-intervals/
 
 https://www.luogu.com.cn/problem/P1908
 
+# 倍增 Binary Lifting
+
 # 最长回文子串
 
 中心扩散

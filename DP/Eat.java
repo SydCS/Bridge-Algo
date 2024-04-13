@@ -11,6 +11,7 @@ public class Eat {
                 arr[i][j] = scanner.nextInt();
             }
         }
+        scanner.close();
 
         // 从上至下
         for (int i = 2; i <= m; i++) {
@@ -19,6 +20,5 @@ public class Eat {
             }
         }
         System.out.println(Math.max(arr[m][(n - 1) / 2], Math.max(arr[m][(n - 1) / 2 + 1], arr[m][(n - 1) / 2 + 2])));
-        scanner.close();
     }
 }

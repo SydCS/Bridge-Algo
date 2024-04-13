@@ -43,7 +43,7 @@ HashSet
 
 ---
 
-Queue 接口 `Queue< > queue = new LinkedList();`
+Queue 接口 `Queue< > queue = new LinkedList<>();`
 
 `add()` or `offer()`
 
@@ -51,7 +51,9 @@ Queue 接口 `Queue< > queue = new LinkedList();`
 
 `poll()`
 
-PriorityQueue 默认小根
+PriorityQueue `PriorityQueue< > queue = new PriorityQueue<>();`
+
+默认小根
 
 Deque 接口 `Deque< > deque = new LinkedList<>();`
 

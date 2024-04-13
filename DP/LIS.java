@@ -36,6 +36,7 @@ public class LIS {
         for (int i = 0; i < len; i++) {
             heights[i] = Integer.parseInt(heightStr[i]);
         }
+        scanner.close();
 
         // O(n^2)
         int[] dpLNIS = new int[len]; // Longest Non-Increasing Sequence
@@ -61,6 +62,5 @@ public class LIS {
 
         System.out.println(lnis);
         System.out.println(lis);
-        scanner.close();
     }
 }

@@ -11,6 +11,7 @@ public class Cowshed {
         while (P-- > 0) {
             bomb[scanner.nextInt() - 1][scanner.nextInt() - 1] = true;
         }
+        scanner.close();
 
         // 高度预处理
         int[][] heights = new int[R][C + 1]; // 在 R 列从 C 及往上最多有多少个未被破坏的矩形
@@ -52,6 +53,5 @@ public class Cowshed {
             }
         }
         System.out.println(maxArea);
-        scanner.close();
     }
 }

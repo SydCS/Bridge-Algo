@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class FibonacciMod7 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         while (true) {
             int A = scanner.nextInt(), B = scanner.nextInt(), n = scanner.nextInt();
             if (A == 0 && B == 0 && n == 0)
@@ -12,7 +11,6 @@ public class FibonacciMod7 {
             n = n % 49;
             System.out.println(fibMod(A, B, n));
         }
-
         scanner.close();
     }
 

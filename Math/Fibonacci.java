@@ -1,10 +1,11 @@
 import java.util.Arrays;
 
+// https://www.acwing.com/file_system/file/content/whole/index/content/3067/
 public class Fibonacci {
     private static int[] memo;
 
     public static void main(String[] args) {
-        int n = 3;
+        int n = 7;
 
         System.out.println(fibRecursive(n));
 
@@ -14,9 +15,10 @@ public class Fibonacci {
 
         System.out.println(fibDynamicProgramming(n));
 
-        System.out.println(fibMatrixFastPower(n));
+        System.out.println(fibMatrixFastExponentiation(n));
     }
 
+    // O(2 ^ n)
     public static int fibRecursive(int n) {
         if (n <= 1)
             return n;
@@ -24,6 +26,7 @@ public class Fibonacci {
         return fibRecursive(n - 1) + fibRecursive(n - 2);
     }
 
+    // O(n)
     public static int fibMemoization(int n) {
         if (n <= 1)
             return n;
@@ -35,6 +38,7 @@ public class Fibonacci {
         return memo[n];
     }
 
+    // O(n)
     public static int fibDynamicProgramming(int n) {
         if (n <= 1)
             return n;
@@ -48,19 +52,21 @@ public class Fibonacci {
         return dp[n];
     }
 
-    public static int fibMatrixFastPower(int n) {
+    // O(\log n)
+    public static int fibMatrixFastExponentiation(int n) {
         if (n <= 1)
             return n;
 
-        int[][] result = { { 1, 0 }, { 0, 1 } }; // 单位矩阵
+        int[][] result = { { 1, 0 }, { 0, 0 } };
         int[][] fibMatrix = { { 1, 1 }, { 1, 0 } };
 
+        // 矩阵快速幂
         while (n > 0) {
             if (n % 2 == 1) {
                 result = multiply(result, fibMatrix);
             }
-            n /= 2;
             fibMatrix = multiply(fibMatrix, fibMatrix);
+            n >>= 1;
         }
 
         return result[0][1];

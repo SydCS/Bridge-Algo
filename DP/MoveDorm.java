@@ -12,6 +12,7 @@ public class MoveDorm {
         for (int i = 1; i <= n; i++) {
             weights[i] = scanner.nextInt();
         }
+        scanner.close();
         Arrays.sort(weights);
 
         int[][] dp = new int[n + 1][k + 1];
@@ -30,6 +31,5 @@ public class MoveDorm {
         }
 
         System.out.println(dp[n][k]);
-        scanner.close();
     }
 }

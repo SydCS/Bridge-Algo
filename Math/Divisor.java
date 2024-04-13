@@ -8,6 +8,8 @@ public class Divisor {
         while (n-- > 0) {
             int a = scanner.nextInt();
 
+            // 约数
+
             // 法1：试除法 O(\sqrt a)
             // int count = 0;
             // for (int i = 1; i <= a / i; i++) {
@@ -18,6 +20,7 @@ public class Divisor {
             // }
             // }
             // }
+            // System.out.println(count);
 
             // 法2：分解质因数 O(\sqrt a)
             int count = 1;
@@ -34,7 +37,6 @@ public class Divisor {
             if (a > 1) {
                 count *= 2;
             }
-
             System.out.println(count);
         }
         scanner.close();

@@ -13,8 +13,9 @@ public class TurtleBoard {
         for (int j = 0; j < M; j++) {
             num[scanner.nextInt()]++;
         }
+        scanner.close();
 
-        int[][][][] dp = new int[41][41][41][41]; // 4种卡片分别使用的张数 (i可由其推导得出) 当前最大得分
+        int[][][][] dp = new int[41][41][41][41]; // 状态：4种卡片分别使用的张数 (i可由其推导得出) 属性：当前最大得分
         for (int a = 0; a <= num[1]; a++) {
             for (int b = 0; b <= num[2]; b++) {
                 for (int c = 0; c <= num[3]; c++) {
@@ -34,6 +35,5 @@ public class TurtleBoard {
             }
         }
         System.out.println(dp[num[1]][num[2]][num[3]][num[4]]);
-        scanner.close();
     }
 }

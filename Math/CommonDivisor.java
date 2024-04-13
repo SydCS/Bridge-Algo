@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 // https://www.acwing.com/problem/content/4202/
 public class CommonDivisor {
-    static int N = 1350;
+    static final int N = 1350;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

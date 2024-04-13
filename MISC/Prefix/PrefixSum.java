@@ -15,7 +15,8 @@ public class PrefixSum {
 
         int m = sc.nextInt();
         while (m-- > 0) {
-            System.out.println(-prefix[sc.nextInt() - 1] + prefix[sc.nextInt()]);
+            int l = sc.nextInt(), r = sc.nextInt();
+            System.out.println(prefix[r] - prefix[l - 1]);
         }
         sc.close();
     }

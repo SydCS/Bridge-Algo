@@ -2,8 +2,7 @@ public class FastExponentiation {
     public static void main(String[] args) {
         int base = 2;
         int exponent = 30;
-        long result = fastExpoRecur(base, exponent);
-        System.out.println(base + "^" + exponent + " = " + result);
+        System.out.println(base + "^" + exponent + " = " + fastExpoRecur(base, exponent));
     }
 
     private static long fastExpo(long base, int exponent) {

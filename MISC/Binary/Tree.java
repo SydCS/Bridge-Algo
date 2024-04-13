@@ -13,19 +13,19 @@ public class Tree {
             trees[i] = scanner.nextInt();
             maxTreeHeight = Math.max(maxTreeHeight, trees[i]);
         }
+        scanner.close();
 
         // 二分答案
         int l = 0, r = maxTreeHeight;
         while (l < r) {
-            int mid = (l + r) >> 1;
+            int mid = (l + r + 1) >> 1;
             if (check(trees, mid, M)) {
-                r = mid;
+                l = mid;
             } else {
-                l = mid + 1;
+                r = mid - 1;
             }
         }
-        System.out.println(l - 1);
-        scanner.close();
+        System.out.println(l);
     }
 
     // 计算在给定高度下获得的木材长度
@@ -36,6 +36,6 @@ public class Tree {
                 sum += tree - height;
             }
         }
-        return sum < M;
+        return sum >= M;
     }
 }

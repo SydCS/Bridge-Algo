@@ -7,6 +7,7 @@ public class Rob {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.next();
         int len = s.length();
+        scanner.close();
 
         // 法1
         int[][] dp = new int[len][2]; // 前i个字符 第i个选/不选 最大价值
@@ -26,6 +27,5 @@ public class Rob {
         // dp[i] = Math.max(dp[i - 1], dp[i - 2] + s.charAt(i) - 'a' + 1);
         // }
         // System.out.println(dp[len - 1]);
-        scanner.close();
     }
 }
