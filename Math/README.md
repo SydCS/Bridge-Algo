@@ -16,6 +16,10 @@ https://acm.hdu.edu.cn/showproblem.php?pid=1019
 
 ### Fibonacci
 
+https://www.acwing.com/file_system/file/content/whole/index/content/3067/
+
+---
+
 找规律，循环节
 
 https://acm.hdu.edu.cn/showproblem.php?pid=1021

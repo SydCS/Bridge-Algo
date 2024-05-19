@@ -6,8 +6,8 @@ public class Palindrome {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.next();
-        scanner.close();
         int n = s.length();
+        scanner.close();
 
         // 最长回文子序列
         // 法1：自身翻转后求 LCS

@@ -16,15 +16,21 @@ https://acm.hdu.edu.cn/showproblem.php?pid=1176
 
 最长递增子序列 Longest Increasing Subsequence:
 
+$O(n^2)$:
+
 $$
 dp[i] = \mathop{\max}(dp[j] + 1, dp[i]) \quad {\forall} 0 ≤ j < i 且 a[j] < a[i]
 $$
+
+$O(n \log n)$:
 
 https://leetcode.cn/problems/longest-increasing-subsequence/
 
 Dilworth 定理：对于一个偏序集，最少链划分数 = 最长反链长度
 
 https://acm.hdu.edu.cn/showproblem.php?pid=1257
+
+https://www.luogu.com.cn/problem/P1020
 
 ---
 

@@ -13,6 +13,7 @@ public class LCM {
                 int number = scanner.nextInt();
                 lcm = lcm(lcm, number);
             }
+
             System.out.println(lcm);
         }
         scanner.close();

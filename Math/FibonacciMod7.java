@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// https://acm.hdu.edu.cn/showproblem.php?pid=1005
 public class FibonacciMod7 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

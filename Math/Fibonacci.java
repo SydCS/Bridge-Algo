@@ -5,7 +5,7 @@ public class Fibonacci {
     private static int[] memo;
 
     public static void main(String[] args) {
-        int n = 7;
+        final int n = 7;
 
         System.out.println(fibRecursive(n));
 

@@ -1,3 +1,19 @@
+# 堆
+
+入堆 siftUp() $O(\log N)$
+
+出堆 siftDown() $O(\log N)$
+
+建堆 $O(N)$
+
+---
+
+Top-K:
+
+https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/82837278
+
+https://leetcode.cn/problems/kth-largest-element-in-an-array/
+
 # 并查集 Disjoint Set
 
 操作：合并，查找
@@ -47,6 +63,8 @@ https://leetcode.cn/problems/largest-rectangle-in-histogram/
 https://leetcode.cn/problems/sliding-window-maximum/
 
 # 前缀树 Trie
+
+https://blog.csdn.net/m0_46202073/article/details/107253959
 
 https://leetcode.cn/problems/replace-words/
 

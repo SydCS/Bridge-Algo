@@ -35,6 +35,8 @@ public class Binary {
         i = binarySearch(check3);
         System.out.printf("%d%n", i);
 
+        ////////////////
+
         Function<Integer, Boolean> check4 = n -> nums[n] < 5;
         i = binarySearch2(check4);
         System.out.printf("第一个>=5的元素 nums[%d] = %d%n", i + 1, nums[i + 1]);

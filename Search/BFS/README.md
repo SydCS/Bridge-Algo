@@ -49,13 +49,3 @@ https://acm.hdu.edu.cn/showproblem.php?pid=1372
 ---
 
 优先队列
-
-堆
-
-siftDown()
-
-Top-K:
-
-https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/82837278
-
-https://leetcode.cn/problems/kth-largest-element-in-an-array/description/

@@ -1,4 +1,4 @@
-参数按值传递
+参数按值传递：
 
 - 基本类型：传的是值的拷贝，对拷贝变量的修改不影响原变量；
 - 引用类型：传的是引用地址的拷贝，但是拷贝的地址和真实地址指向的都是同一个真实数据，因此可以修改原变量中的值。
@@ -27,7 +27,7 @@
 
 ---
 
-HashMap
+HashMap:
 
 `put( , )`
 
@@ -35,11 +35,13 @@ HashMap
 
 ---
 
-HashSet
+HashSet:
 
 `add()`
 
 `contains()`
+
+`remove()`
 
 ---
 
@@ -51,11 +53,11 @@ Queue 接口 `Queue< > queue = new LinkedList<>();`
 
 `poll()`
 
+Deque 接口 `Deque< > deque = new LinkedList<>();`
+
 PriorityQueue `PriorityQueue< > queue = new PriorityQueue<>();`
 
 默认小根
-
-Deque 接口 `Deque< > deque = new LinkedList<>();`
 
 ---
 

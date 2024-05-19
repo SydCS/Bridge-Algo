@@ -2,6 +2,8 @@ https://oi-wiki.org/
 
 https://space.bilibili.com/1402562141/channel/collectiondetail?sid=2213878
 
+https://space.bilibili.com/206214/channel/collectiondetail?sid=842776
+
 # 技巧
 
 https://www.acwing.com/blog/content/32/

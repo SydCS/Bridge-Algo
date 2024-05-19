@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// https://acm.hdu.edu.cn/showproblem.php?pid=1021
 public class FibonacciMod3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -43,7 +44,6 @@ public class FibonacciMod3 {
             // // 如果c等于0，则F(n)可以被3整除
             // System.out.println(c == 0 ? "yes" : "no");
         }
-
         scanner.close();
     }
 }

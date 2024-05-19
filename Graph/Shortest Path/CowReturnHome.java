@@ -8,8 +8,6 @@ public class CowReturnHome {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int m = scanner.nextInt(); // 边数
-
-        // 单源最短路：Dijkstra O(n^2 + m)
         int[][] g = new int[n + 1][n + 1]; // 邻接矩阵
         for (int i = 0; i <= n; i++) {
             Arrays.fill(g[i], 0x3f3f3f3f);
@@ -20,6 +18,7 @@ public class CowReturnHome {
         }
         scanner.close();
 
+        // 单源最短路：Dijkstra O(n^2 + m)
         int[] dist = new int[n + 1];
         dijkstra(g, dist, 26);
 
