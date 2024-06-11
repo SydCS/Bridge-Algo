@@ -42,7 +42,7 @@ public class ReversePairs {
             if (num[i] <= num[j]) {
                 tmp[k++] = num[i++];
             } else {
-                reverse += (mid - i + 1); // 产生逆序对：左区间所有num[i]及之后的数都比num[j]大
+                reverse += (mid - i + 1); // 产生逆序对：左区间中 num[i] 及其之后的数都比 num[j] 大
                 tmp[k++] = num[j++];
             }
         }

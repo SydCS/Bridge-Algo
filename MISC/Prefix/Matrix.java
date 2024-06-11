@@ -11,6 +11,7 @@ public class Matrix {
                 matrix[i][j] = scanner.nextInt();
             }
         }
+        scanner.close();
 
         // 二维前缀和
         for (int i = 1; i <= n; i++) {

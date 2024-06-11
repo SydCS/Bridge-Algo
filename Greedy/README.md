@@ -42,3 +42,5 @@ https://acm.hdu.edu.cn/showproblem.php?pid=2454
 ---
 
 https://acm.hdu.edu.cn/showproblem.php?pid=1007
+
+https://www.luogu.com.cn/problem/P1429

@@ -24,14 +24,6 @@ $$
 
 # 双指针
 
-# 滑动窗口
-
-https://leetcode.cn/problems/minimum-size-subarray-sum/
-
-https://leetcode.cn/problems/longest-substring-without-repeating-characters/
-
-https://leetcode.cn/problems/subarray-product-less-than-k/
-
 # 贡献法
 
 枚举，但换一种角度
@@ -39,14 +31,6 @@ https://leetcode.cn/problems/subarray-product-less-than-k/
 # 合并区间
 
 https://leetcode.cn/problems/merge-intervals/
-
-# 逆序对
-
-使序列有序的最少交换次数 = 逆序对个数
-
-求逆序对个数：归并排序 / 树状数组 $O(n \log n)$
-
-https://www.luogu.com.cn/problem/P1908
 
 # 倍增 Binary Lifting
 

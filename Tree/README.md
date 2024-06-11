@@ -8,9 +8,9 @@ https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/
 
 ---
 
-多叉数：
+多叉树：
 
-倍增
+倍增 /
 
 https://www.luogu.com.cn/problem/P3379
 

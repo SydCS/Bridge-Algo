@@ -29,9 +29,13 @@
 
 HashMap:
 
-`put( , )`
+`put(k, v)`
 
-`get()`
+`get(k)`
+
+`containsKey(k)`
+
+`remove(k)`
 
 ---
 

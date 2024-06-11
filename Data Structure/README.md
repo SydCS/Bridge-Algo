@@ -34,7 +34,7 @@ https://acm.hdu.edu.cn/showproblem.php?pid=1232
 
 ---
 
-Kruskal 算法
+Kruskal
 
 最小生成树 **Minimum Spanning Tree**：边权之和最小的无环连通子图
 
@@ -66,6 +66,8 @@ https://leetcode.cn/problems/sliding-window-maximum/
 
 https://blog.csdn.net/m0_46202073/article/details/107253959
 
+https://leetcode.cn/problems/implement-trie-prefix-tree/
+
 https://leetcode.cn/problems/replace-words/
 
 https://www.luogu.com.cn/problem/P2580
@@ -74,4 +76,4 @@ https://www.luogu.com.cn/problem/P2580
 
 单点修改 & 区间求和 $O(\log n)$
 
-# 线段树 Segment
+# 线段树 Segment Tree

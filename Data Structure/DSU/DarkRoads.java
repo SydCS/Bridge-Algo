@@ -71,9 +71,9 @@ public class DarkRoads {
                 roads[n] = new Road(x, y, z);
                 totalCost += z;
             }
-            Arrays.sort(roads);
 
             // Kruskal
+            Arrays.sort(roads);
             int mstCost = 0;
             for (Road r : roads) {
                 int xRoot = find(r.x);
