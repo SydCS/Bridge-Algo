@@ -25,7 +25,7 @@
 
 **回溯**
 
-https://leetcode.cn/problems/permutations/description/
+https://leetcode.cn/problems/permutations/
 
 ---
 

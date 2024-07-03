@@ -2,20 +2,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        int[] arr = new int[n + 1];
-        for (int i = 1; i <= n; i++) {
-            arr[i] = scanner.nextInt();
-        }
-        scanner.close();
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sc.close();
 
-        int[] dp = new int[n + 1]; // 以 nums[i] 结尾的最大字段和
-        int max = 0xc0c0c0c0;
-        for (int i = 1; i <= n; i++) {
-            dp[i] = dp[i - 1] > 0 ? dp[i - 1] + arr[i] : arr[i];
-            max = Math.max(dp[i], max);
+        // Catalan
+        int[] catalan = new int[n + 1];
+        catalan[0] = 1;
+        catalan[1] = 1;
+        for (int i = 2; i <= n; i++) {
+            catalan[i] = 0;
+            for (int j = 0; j < i; j++) {
+                catalan[i] += catalan[j] * catalan[i - j - 1];
+            }
         }
-        System.out.println(max);
+        System.out.println(catalan[n]);
     }
 }

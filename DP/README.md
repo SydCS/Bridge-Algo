@@ -6,11 +6,8 @@ $$
 dp[i][j] = \mathop{\max} (dp[i+1][j], dp[i+1][j+1]) + a[i][j]
 $$
 
-https://leetcode.cn/problems/triangle/
-
-以时间作为维度的数塔：
-
-https://acm.hdu.edu.cn/showproblem.php?pid=1176
+- https://leetcode.cn/problems/triangle/
+  - https://acm.hdu.edu.cn/showproblem.php?pid=1176 以时间作为维度的数塔
 
 ---
 
@@ -24,19 +21,19 @@ $$
 
 $O(n \log n)$:
 
-https://leetcode.cn/problems/longest-increasing-subsequence/
+- https://leetcode.cn/problems/longest-increasing-subsequence/
 
 Dilworth 定理：对于一个偏序集，最少链划分数 = 最长反链长度
 
-https://acm.hdu.edu.cn/showproblem.php?pid=1257
+- https://acm.hdu.edu.cn/showproblem.php?pid=1257
 
-https://www.luogu.com.cn/problem/P1020
+- https://www.luogu.com.cn/problem/P1020
 
 ---
 
 最长公共子序列 Longest Common Subsequence:
 
-https://leetcode.cn/problems/longest-common-subsequence/
+- https://leetcode.cn/problems/longest-common-subsequence/
 
 ---
 
@@ -69,7 +66,12 @@ for i in range(1, N + 1):
         dp[w] = max(dp[w], dp[w - w_i] + v[i])
 ```
 
-https://acm.hdu.edu.cn/showproblem.php?pid=2602
+- https://acm.hdu.edu.cn/showproblem.php?pid=2602
+
+---
+
+- https://leetcode.cn/problems/partition-equal-subset-sum/
+- https://leetcode.cn/problems/target-sum/
 
 ### 完全背包
 
@@ -82,13 +84,17 @@ for i in range(1, N + 1):
 ---
 
 若必须恰好装满？
-初始化
+初始化；判断
 
-https://acm.hdu.edu.cn/showproblem.php?pid=1114
+- https://acm.hdu.edu.cn/showproblem.php?pid=1114
+  - https://leetcode.cn/problems/coin-change/
+  - https://leetcode.cn/problems/perfect-squares/
 
 ---
 
-方案数
+求方案数：
+
+- https://www.luogu.com.cn/problem/P1474
 
 ### 多重背包
 
@@ -108,13 +114,13 @@ $$
 dp(i,j) = \min \{ dp(i,k) + dp(k+1,j) + cost \} \quad {\forall} i ≤ k < j
 $$
 
-https://www.luogu.com.cn/problem/P1880
+- https://www.luogu.com.cn/problem/P1880
 
 ---
 
 最长回文子序列 Longest Palindromic Subsequence:
 
-https://leetcode.cn/problems/longest-palindromic-subsequence/
+- https://leetcode.cn/problems/longest-palindromic-subsequence/
 
 ## 状态压缩 DP
 

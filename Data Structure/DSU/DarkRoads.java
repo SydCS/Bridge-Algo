@@ -8,10 +8,10 @@ public class DarkRoads {
         int y;
         int w;
 
-        public Road(int x, int y, int z) {
+        public Road(int x, int y, int w) {
             this.x = x;
             this.y = y;
-            this.w = z;
+            this.w = w;
         }
 
         @Override
@@ -73,9 +73,10 @@ public class DarkRoads {
             }
 
             // Kruskal
-            Arrays.sort(roads);
+            Arrays.sort(roads); // O(E \log E)
+
             int mstCost = 0;
-            for (Road r : roads) {
+            for (Road r : roads) { // O(E \log V)
                 int xRoot = find(r.x);
                 int yRoot = find(r.y);
                 if (xRoot != yRoot) {

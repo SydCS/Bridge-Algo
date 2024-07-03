@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 // https://www.luogu.com.cn/problem/P1529
 public class CowReturnHome {
-    static final int n = 52;
+    static final int n = 52; // 节点数
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -18,7 +18,7 @@ public class CowReturnHome {
         }
         scanner.close();
 
-        // 单源最短路：Dijkstra O(n^2 + m)
+        // 单源最短路 Dijkstra O(n^2 + m)
         int[] dist = new int[n + 1];
         dijkstra(g, dist, 26);
 

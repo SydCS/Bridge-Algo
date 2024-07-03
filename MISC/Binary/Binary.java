@@ -60,24 +60,22 @@ public class Binary {
         int l = 0, r = nums.length;
         while (l < r) {
             int mid = (l + r) >> 1;
-            if (check.apply(mid)) {
+            if (check.apply(mid))
                 r = mid;
-            } else {
+            else
                 l = mid + 1;
-            }
         }
         return r;
     }
 
     public static int binarySearch2(Function<Integer, Boolean> check) { // 111...000 找最后一个1的位置
-        int l = 0, r = nums.length;
+        int l = 0, r = nums.length - 1;
         while (l < r) {
             int mid = (l + r + 1) >> 1;
-            if (check.apply(mid)) {
+            if (check.apply(mid))
                 l = mid;
-            } else {
+            else
                 r = mid - 1;
-            }
         }
         return l;
     }

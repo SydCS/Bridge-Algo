@@ -1,8 +1,8 @@
 # 二分
 
-二分查找 前提：满足单调性
+二分查找/二分答案
 
-二分答案 前提：满足二段性
+前提：满足二段性
 
 https://www.acwing.com/blog/content/31/
 
@@ -30,19 +30,10 @@ $$
 
 # 合并区间
 
-https://leetcode.cn/problems/merge-intervals/
+- https://leetcode.cn/problems/merge-intervals/
+- https://leetcode.cn/problems/non-overlapping-intervals/
 
 # 倍增 Binary Lifting
-
-# 最长回文子串
-
-中心扩散
-
-Manacher's Algorithm
-
-https://leetcode.cn/problems/longest-palindromic-substring/
-
-https://leetcode.cn/problems/palindromic-substrings/
 
 # Genetic Algorithm
 

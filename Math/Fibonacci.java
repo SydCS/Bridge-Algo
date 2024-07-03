@@ -5,17 +5,17 @@ public class Fibonacci {
     private static int[] memo;
 
     public static void main(String[] args) {
-        final int n = 7;
+        final int N = 7;
 
-        System.out.println(fibRecursive(n));
+        System.out.println(fibRecursive(N));
 
-        memo = new int[n + 1];
+        memo = new int[N + 1];
         Arrays.fill(memo, -1);
-        System.out.println(fibMemoization(n));
+        System.out.println(fibMemoization(N));
 
-        System.out.println(fibDynamicProgramming(n));
+        System.out.println(fibDynamicProgramming(N));
 
-        System.out.println(fibMatrixFastExponentiation(n));
+        System.out.println(fibMatrixFastExponentiation(N));
     }
 
     // O(2 ^ n)

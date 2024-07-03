@@ -12,7 +12,13 @@ Top-K:
 
 https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/82837278
 
-https://leetcode.cn/problems/kth-largest-element-in-an-array/
+- https://leetcode.cn/problems/kth-largest-element-in-an-array/
+- https://leetcode.cn/problems/top-k-frequent-elements/
+
+---
+
+- https://leetcode.cn/problems/merge-k-sorted-lists/
+- https://leetcode.cn/problems/find-median-from-data-stream/
 
 # 并查集 Disjoint Set
 
@@ -30,47 +36,46 @@ https://leetcode.cn/problems/kth-largest-element-in-an-array/
       - 合并时，按秩合并：将深度小的数合并到大的树
       - 查找时，路径压缩
 
-https://acm.hdu.edu.cn/showproblem.php?pid=1232
+---
+
+- https://acm.hdu.edu.cn/showproblem.php?pid=1232
 
 ---
 
 Kruskal
 
-最小生成树 **Minimum Spanning Tree**：边权之和最小的无环连通子图
+最小生成树 **Minimum Spanning Tree**：边权之和最小的包含图中所有顶点的无环连通子图
 
 MST 性质：存在一棵最小生成树包含最小权值的边
 
 选最小，查，并
 
-时间复杂度 $O(e \log e)$
+时间复杂度 $O(E \log E)$
 
-https://acm.hdu.edu.cn/showproblem.php?pid=2988
-
-https://acm.hdu.edu.cn/showproblem.php?pid=1102
+- https://acm.hdu.edu.cn/showproblem.php?pid=2988
+- https://acm.hdu.edu.cn/showproblem.php?pid=1102
 
 # 单调栈
 
 Next Greater Element: 在数组中，找每个数左/右边第一个比它大/小的数 $O(n)$
 
-https://leetcode.cn/problems/daily-temperatures/
-
-https://leetcode.cn/problems/largest-rectangle-in-histogram/
+- https://leetcode.cn/problems/daily-temperatures/
+- https://leetcode.cn/problems/largest-rectangle-in-histogram/
 
 # 单调队列
 
 滑动窗口：求区间最值 $O(n)$
 
-https://leetcode.cn/problems/sliding-window-maximum/
+- https://leetcode.cn/problems/sliding-window-maximum/
 
 # 前缀树 Trie
 
 https://blog.csdn.net/m0_46202073/article/details/107253959
 
-https://leetcode.cn/problems/implement-trie-prefix-tree/
-
-https://leetcode.cn/problems/replace-words/
-
-https://www.luogu.com.cn/problem/P2580
+- https://leetcode.cn/problems/implement-trie-prefix-tree/
+- https://leetcode.cn/problems/replace-words/
+- https://leetcode.cn/problems/search-suggestions-system/
+- https://www.luogu.com.cn/problem/P2580
 
 # 树状数组 Binary Indexed Tree
 

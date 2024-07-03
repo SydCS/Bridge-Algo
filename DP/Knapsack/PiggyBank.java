@@ -21,7 +21,7 @@ public class PiggyBank {
 
             // 完全背包 恰好装满
             int[] dp = new int[10010];
-            Arrays.fill(dp, INF); // 求最小值时，初始化为无穷大 0x3f3f3f3f
+            Arrays.fill(dp, INF); // 求最小值时，初始化为无穷大
             dp[0] = 0;
 
             for (int i = 0; i < N; i++) {

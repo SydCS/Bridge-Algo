@@ -1,18 +1,22 @@
 # 数学
 
-乘法小心爆 int (-2147483648 ~ 2147483647) ---> 改 long
+乘法小心爆 int (-2147483648 ~ 2147483647) --> 改 long
 
 > 三年 OI 一场空，不开 long long 见祖宗。
+
+## 位运算
+
+- https://leetcode.cn/problems/single-number/
 
 ## 数论
 
 ### Greatest Common Divisor
 
-LCM = a / GCD \* b
-
 辗转相除法 $O(\log n)$
 
-https://acm.hdu.edu.cn/showproblem.php?pid=1019
+LCM = a / GCD \* b
+
+- https://acm.hdu.edu.cn/showproblem.php?pid=1019
 
 ### Fibonacci
 
@@ -22,23 +26,22 @@ https://www.acwing.com/file_system/file/content/whole/index/content/3067/
 
 找规律，循环节
 
-https://acm.hdu.edu.cn/showproblem.php?pid=1021
-
-https://acm.hdu.edu.cn/showproblem.php?pid=1005
+- https://acm.hdu.edu.cn/showproblem.php?pid=1021
+- https://acm.hdu.edu.cn/showproblem.php?pid=1005
 
 ### 快速幂
 
 带模运算
 
-https://www.luogu.com.cn/problem/P1226
+- https://www.luogu.com.cn/problem/P1226
 
 ### 筛法
 
 Sieve of Eratosthenes $O(n \log \log n)$
 
-Euler $O(n)$
+Sieve of Euler $O(n)$
 
-https://leetcode.cn/problems/count-primes/
+- https://leetcode.cn/problems/count-primes/
 
 ### 欧拉函数 Euler's totient function
 
@@ -54,8 +57,12 @@ https://leetcode.cn/problems/count-primes/
 
 若 a b 为互质正整数，则最大的不能由 a b 凑出的数为 ab - a - b
 
-https://www.luogu.com.cn/problem/P3951
+- https://www.luogu.com.cn/problem/P3951
 
 ## 组合数学
 
 二项式定理
+
+### Catalan
+
+- https://leetcode.cn/problems/unique-binary-search-trees/
