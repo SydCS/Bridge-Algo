@@ -12,6 +12,7 @@ public class Travel {
                 w[i][j] = scanner.nextInt();
             }
         }
+        scanner.close();
 
         // 状态表示：dp[s,j]
         // 集合：s表示当前已经遍历过的城市（n位二进制），最后到达j
@@ -45,6 +46,5 @@ public class Travel {
             min = Math.min(min, dp[states - 1][j] + w[j][0]);
         }
         System.out.println(min);
-        scanner.close();
     }
 }
