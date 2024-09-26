@@ -14,6 +14,7 @@ public class Flood {
                 map[i][j] = line.charAt(j);
             }
         }
+        scanner.close();
 
         // 四周开搜
         for (int i = 0; i < x; i++) {
@@ -38,7 +39,6 @@ public class Flood {
             }
         }
         System.out.println(count);
-        scanner.close();
     }
 
     public static void dfs(int x, int y, char[][] map) {

@@ -1,3 +1,11 @@
+# 栈
+
+表达式求值：
+
+- https://leetcode.cn/problems/evaluate-reverse-polish-notation/
+- https://leetcode.cn/problems/basic-calculator-ii/
+  - https://leetcode.cn/problems/basic-calculator-ii/solutions/648832/shi-yong-shuang-zhan-jie-jue-jiu-ji-biao-c65k/
+
 # 堆
 
 入堆 siftUp() $O(\log N)$

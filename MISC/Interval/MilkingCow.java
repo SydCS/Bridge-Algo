@@ -23,6 +23,7 @@ public class MilkingCow {
         for (int i = 0; i < n; i++) {
             times[i] = new Time(scanner.nextInt(), scanner.nextInt());
         }
+        scanner.close();
         Arrays.sort(times);
 
         // 合并区间
@@ -40,6 +41,5 @@ public class MilkingCow {
             }
         }
         System.out.println(maxOccupied + " " + maxEmpty);
-        scanner.close();
     }
 }

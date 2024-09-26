@@ -28,6 +28,7 @@ public class CowBeautyPageant {
         for (int i = 0; i < N; i++) {
             board[i] = scanner.nextLine().toCharArray();
         }
+        scanner.close();
 
         // 找连通分量：DFS / BFS / 并查集
         int k = 0;
@@ -70,9 +71,9 @@ public class CowBeautyPageant {
             for (int j = 0; j < M; j++) {
                 if (board[i][j] == '.') {
                     int tmp = 0;
-                    for (int n = 0; n <= 2; n++) {
+                    for (int k = 0; k <= 2; k++) {
                         int minDist = 0x3f3f3f3f;
-                        for (Point p : points.get(n)) {
+                        for (Point p : points.get(k)) {
                             minDist = Math.min(minDist, Math.abs(p.x - i) + Math.abs(p.y - j));
                         }
                         tmp += minDist - 1;
@@ -81,8 +82,8 @@ public class CowBeautyPageant {
                 }
             }
         }
+
         System.out.println(Math.min(minDistTotal1, minDistTotal2 + 1));
-        scanner.close();
     }
 
     private static void dfs(int i, int j, List<Point> points) {

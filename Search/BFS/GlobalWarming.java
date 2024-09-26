@@ -13,6 +13,7 @@ public class GlobalWarming {
         for (int i = 0; i < N; i++) {
             map[i] = scanner.next().toCharArray();
         }
+        scanner.close();
 
         int island = 0;
         for (int i = 0; i < N; i++) {
@@ -55,8 +56,6 @@ public class GlobalWarming {
         // }
         // }
         // System.out.println(count);
-
-        scanner.close();
     }
 
     private static boolean bfs(int i, int j) {
@@ -96,9 +95,8 @@ public class GlobalWarming {
         for (int[] dir : dirs) {
             int x = i + dir[0];
             int y = j + dir[1];
-            if (x >= 0 && x < N && y >= 0 && y < N && map[x][y] == '.') {
+            if (x >= 0 && x < N && y >= 0 && y < N && map[x][y] == '.') 
                 return true;
-            }
         }
         return false;
     }

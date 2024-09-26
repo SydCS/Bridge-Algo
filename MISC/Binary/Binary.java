@@ -1,6 +1,6 @@
 import java.util.function.Function;
 
-// 二分模板
+// 二分 模板
 public class Binary {
     static int[] nums;
 

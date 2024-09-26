@@ -26,13 +26,13 @@ def partition(arr, low, high):
 
     # 实现2 - 滑窗：
     pivot = arr[high]
-    l = low - 1
-    for r in range(low, high):
-        if arr[r] <= pivot:
-            l += 1
-            arr[l], arr[r] = arr[r], arr[l]
-    arr[l + 1], arr[high] = arr[high], arr[l + 1]
-    return l + 1
+    i = low - 1
+    for j in range(low, high):
+        if arr[j] <= pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    return i + 1
 
 
 def quicksort(arr, low, high):

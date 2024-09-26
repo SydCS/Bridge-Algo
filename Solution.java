@@ -1,33 +1,81 @@
-class Solution {
-    private static final int M = 100;
-    private static final boolean[] PRIME = new boolean[M];
-
-    public int maximumPrimeDifference(int[] nums) {
-        isPrime(M);
-        int first = -1, maxDist = 0;
-        for (int i = 0; i < nums.length; ++i) {
-            if (PRIME[nums[i]]) {
-                if (first == -1)
-                    first = i;
-                else
-                    maxDist = Math.max(maxDist, i - first);
-            }
+public class Solution {
+    private int getPriority(char c) {
+        switch (c) {
+            case '+':
+            case '-':
+                return 1;
+            case '*':
+            case '/':
+                return 2;
+            default:
+                return 0;
         }
-        return maxDist;
     }
 
-    private boolean isPrime(int n) {
-        PRIME = new boolean[n + 1];
-        Arrays.fill(PRIME, true);
-        PRIME[0] = PRIME[1] = false;
+    private List<String> convert(String s) {
+        List<String> rpn = new ArrayList<>();
+        Stack<Character> op = new Stack<>();
 
-        for (int i = 2; i <= n; i++) {
-            if (PRIME[i] == true) {
-                for (int j = i; j * i <= n; j++) {
-                    PRIME[j * i] = false;
+        int i = 0, n = s.length();
+        while (i < n) {
+            if (s.charAt(i) == ' ') {
+                ++i;
+            } else if (Character.isDigit(s.charAt(i))) {
+                StringBuilder sb = new StringBuilder();
+                while (i < n && Character.isDigit(s.charAt(i))) {
+                    sb.append(s.charAt(i));
+                    ++i;
                 }
+                rpn.add(sb.toString());
+            } else if (s.charAt(i) == '(') {
+                op.push(s.charAt(i));
+                ++i;
+            } else if (s.charAt(i) == ')') {
+                while (!op.isEmpty() && op.peek() != '(') {
+                    rpn.add(Character.toString(op.peek()));
+                    op.pop();
+                }
+                op.pop();
+                ++i;
+            } else {
+                while (!op.isEmpty() && getPriority(op.peek()) >= getPriority(s.charAt(i))) {
+                    rpn.add(Character.toString(op.peek()));
+                    op.pop();
+                }
+                op.push(s.charAt(i));
+                ++i;
             }
         }
-        return PRIME[n];
+        while (!op.isEmpty()) {
+            rpn.add(Character.toString(op.peek()));
+            op.pop();
+        }
+        return rpn;
+    }
+
+    private int evalRPN(List<String> tokens) {
+        Stack<Integer> stack = new Stack<>();
+        for (String s : tokens) {
+            if ("+".equals(s) || "-".equals(s) || "*".equals(s) || "/".equals(s)) {
+                int rhs = stack.pop(), lhs = stack.pop();
+
+                if ("+".equals(s))
+                    stack.push(lhs + rhs);
+                else if ("-".equals(s))
+                    stack.push(lhs - rhs);
+                else if ("*".equals(s))
+                    stack.push(lhs * rhs);
+                else if ("/".equals(s))
+                    stack.push(lhs / rhs);
+            } else {
+                stack.push(Integer.parseInt(s));
+            }
+        }
+        return stack.peek();
+    }
+
+    public int calculate(String s) {
+        List<String> rpn = convert(s);
+        return evalRPN(rpn);
     }
 }

@@ -59,6 +59,8 @@ Queue 接口 `Queue< > queue = new LinkedList<>();`
 
 Deque 接口 `Deque< > deque = new LinkedList<>();`
 
+https://blog.csdn.net/devnn/article/details/82716447
+
 PriorityQueue `PriorityQueue< > queue = new PriorityQueue<>();`
 
 默认小根

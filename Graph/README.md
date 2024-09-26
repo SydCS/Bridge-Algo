@@ -10,17 +10,28 @@
 
 ![Path](Path.png)
 
-单源最短路 非负权图 Dijkstra
+https://drrany.github.io/ShortestPathAlgorithm/
+
+---
+
+单源 无负权 Dijkstra
+
+朴素
+
+堆优化
 
 - https://leetcode.cn/problems/network-delay-time/
+- https://leetcode.cn/problems/number-of-restricted-paths-from-first-to-last-node/
 
 ---
 
 Bellman-Ford
 
+SPFA
+
 ---
 
-多源汇最短路 Floyd
+多源汇 Floyd
 
 - https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/
 - https://leetcode.cn/problems/evaluate-division/

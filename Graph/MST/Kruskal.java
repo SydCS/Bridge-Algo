@@ -49,16 +49,16 @@ public class Kruskal {
         // Kruskal
         Arrays.sort(edges);
 
-        int mstCost = 0, edgeCount = 0;
+        int mstCost = 0, count = 0;
         for (Edge e : edges) {
             int xRoot = find(e.x);
             int yRoot = find(e.y);
             if (xRoot != yRoot) {
                 union(xRoot, yRoot);
                 mstCost += e.w;
-                edgeCount++;
+                count++;
             }
         }
-        System.out.println(edgeCount == N - 1 ? mstCost : "orz");
+        System.out.println(count == N - 1 ? mstCost : "orz");
     }
 }

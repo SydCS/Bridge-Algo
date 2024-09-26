@@ -11,12 +11,12 @@ $$
 
 ---
 
-最长递增子序列 Longest Increasing Subsequence:
+最长上升子序列 Longest Increasing Subsequence:
 
 $O(n^2)$:
 
 $$
-dp[i] = \mathop{\max}(dp[j] + 1, dp[i]) \quad {\forall} 0 ≤ j < i 且 a[j] < a[i]
+dp[i] = \mathop{\max}(dp[j] + 1) \quad {\forall} 0 ≤ j < i 且 a[j] < a[i]
 $$
 
 $O(n \log n)$:
@@ -26,7 +26,6 @@ $O(n \log n)$:
 Dilworth 定理：对于一个偏序集，最少链划分数 = 最长反链长度
 
 - https://acm.hdu.edu.cn/showproblem.php?pid=1257
-
 - https://www.luogu.com.cn/problem/P1020
 
 ---
@@ -70,8 +69,8 @@ for i in range(1, N + 1):
 
 ---
 
-- https://leetcode.cn/problems/partition-equal-subset-sum/
-- https://leetcode.cn/problems/target-sum/
+- https://leetcode.cn/problems/partition-equal-subset-sum/ 装满 是否可行
+- https://leetcode.cn/problems/target-sum/ 装满 求方案数
 
 ### 完全背包
 
