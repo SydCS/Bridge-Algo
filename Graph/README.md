@@ -48,6 +48,28 @@ Prim 加点法
 
 - https://leetcode.cn/problems/is-graph-bipartite/
 
+---
+
+最大匹配
+
+_Hungarian Algorithm_ 找增广路增加匹配边
+
+---
+
+最小顶点覆盖
+
+https://acm.hdu.edu.cn/showproblem.php?pid=1150
+
+Konig 定理：二分图中，最小顶点覆盖数 = 最大匹配数
+
+最大独立集数 = 节点数 - 最小顶点覆盖数
+
+---
+
+DAG 图的最小路径覆盖数 = 节点数 - 最大匹配数
+
+https://acm.hdu.edu.cn/showproblem.php?pid=1151
+
 ## 拓扑排序
 
 AOV
